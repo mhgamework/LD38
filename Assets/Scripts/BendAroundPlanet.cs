@@ -25,6 +25,8 @@ public class BendAroundPlanet : MonoBehaviour
     [Range(0.1f, 10f)]
     private float scale = 1f;
     [SerializeField]
+    private bool uniformScale = false;
+    [SerializeField]
     [Range(0f, 360f)]
     private float rotation = 0f;
 
@@ -120,7 +122,9 @@ public class BendAroundPlanet : MonoBehaviour
         if (Source == null) return;
         Target = Instantiate(Source);
         Target.transform.localPosition += new Vector3(0, CircleRadius, 0); //* CircleRadius;
-        Target.transform.localScale = Vector3.Scale(new Vector3(scale, 1f, scale), Target.transform.localScale);
+
+        var y_scale = uniformScale ? scale : 1f;
+        Target.transform.localScale = Vector3.Scale(new Vector3(scale, y_scale, scale), Target.transform.localScale);
         Target.transform.localEulerAngles += new Vector3(0f, rotation, 0f);
 
 
