@@ -8,10 +8,13 @@ public class PlanetCamera : MonoBehaviour
 
     public GameObject Dude;
     public float MovementSpeed = 1;
+
+    [SerializeField]
+    private float radius = 10.3f;
+
     // Use this for initialization
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -34,14 +37,14 @@ public class PlanetCamera : MonoBehaviour
 
         dir = dir.normalized;
 
+        var f = Vector3.one; //Camera.main.transform.forward;
+        var right = Vector3.Cross(f, RigidBody.position.normalized).normalized;
+        var forward = Vector3.Cross(RigidBody.position.normalized, right).normalized;
 
-        var right = Vector3.Cross(Camera.main.transform.forward, RigidBody.position.normalized);
-        var forward = Vector3.Cross(RigidBody.position.normalized, right);
+        Debug.DrawLine(RigidBody.position, RigidBody.position + right, Color.red);
+        Debug.DrawLine(RigidBody.position, RigidBody.position + forward, Color.blue);
 
-        Debug.DrawLine(RigidBody.position, RigidBody.position + right,Color.red);
-        Debug.DrawLine(RigidBody.position, RigidBody.position + forward,Color.blue);
-
-        RigidBody.position = RigidBody.position.normalized * 10.3f;
+        RigidBody.position = RigidBody.position.normalized * radius;
 
         RigidBody.velocity = (right * dir.x + forward * dir.y) * Time.deltaTime * MovementSpeed;
         RigidBody.angularVelocity = new Vector3();
