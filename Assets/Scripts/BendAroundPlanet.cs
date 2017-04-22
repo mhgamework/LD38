@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class BendAroundPlanet : MonoBehaviour
 {
 
@@ -12,13 +13,31 @@ public class BendAroundPlanet : MonoBehaviour
     }
 
     public float CircleRadius = 10;// { get { return CircleCircumference / 2 / Mathf.PI; } }
+    public GameObject Source;
+    [SerializeField]
+    private GameObject LastSource;
+    [SerializeField]
+    private GameObject Target;
+    //public bool reset = false;
     // Use this for initialization
     void Start()
     {
+        //transform.position = new Vector3(0, 1, 0) * CircleRadius;
+    }
 
-        //transform.position = new Vector3(1, 0, 0) * CircleRadius;
+    //void OnValidate()
+    //{
+    //    if (reset)
+    //    {
+    //        Destroy(Target);
+    //        Target = null;
+    //        reset = false;
+    //    }
+    //}
 
-        foreach (var filter in GetComponentsInChildren<MeshFilter>())
+    private void bendAllMeshes(Transform obj)
+    {
+        foreach (var filter in obj.GetComponentsInChildren<MeshFilter>())
         {
             var opt = filter.GetComponent<BendOptions>();
             if (opt && !opt.BendMesh)
@@ -27,26 +46,25 @@ public class BendAroundPlanet : MonoBehaviour
             var mesh = filter.mesh;
 
 
-
             var verts = mesh.vertices
                 .Select(v =>
-                {
-                    var vWorld = filter.transform.TransformPoint(v);
-                    var vBendWorld = bendVertexWorldSpace(vWorld);
-                    return vBendWorld;
-                }
+                    {
+                        var vWorld = filter.transform.TransformPoint(v);
+                        var vBendWorld = bendVertexWorldSpace(vWorld);
+                        return vBendWorld;
+                    }
                 ).ToList();
 
             mesh.SetVertices(verts);
         }
 
-        foreach (var b in GetComponentsInChildren<BendTransform>())
+        foreach (var b in obj.GetComponentsInChildren<BendTransform>())
         {
             bendTransform(b.transform);
         }
 
 
-        foreach (var filter in GetComponentsInChildren<MeshFilter>())
+        foreach (var filter in obj.GetComponentsInChildren<MeshFilter>())
         {
             var opt = filter.GetComponent<BendOptions>();
             if (opt && !opt.BendMesh)
@@ -57,17 +75,11 @@ public class BendAroundPlanet : MonoBehaviour
             var mesh = filter.mesh;
 
             var verts = mesh.vertices
-            .Select(v =>
-            {
-                return filter.transform.InverseTransformPoint(v);
-            }
-            ).ToList();
-
-
+                .Select(v => { return filter.transform.InverseTransformPoint(v); }
+                ).ToList();
 
 
             //verts = verts.Select()
-
 
 
             mesh.SetVertices(verts);
@@ -79,8 +91,21 @@ public class BendAroundPlanet : MonoBehaviour
             var collider = filter.GetComponent<MeshCollider>();
             if (collider) collider.sharedMesh = mesh;
         }
+    }
 
+    public void Update()
+    {
+        if (Target == null && Source == null) return;
+        if (Target != null && Source != null && Source == LastSource) return;
+        LastSource = Source;
+        if (Target != null) DestroyImmediate(Target);
+        if (Source == null) return;
+        Target = Instantiate(Source);
+        Target.transform.localPosition += new Vector3(0, CircleRadius, 0); //* CircleRadius;
 
+        bendAllMeshes(Target.transform);
+        Target.transform.SetParent(transform,false);
+        Target.name += " - Bended";
 
     }
 
@@ -110,7 +135,7 @@ public class BendAroundPlanet : MonoBehaviour
 
     private Vector3 bendVertexWorldSpace(Vector3 vWorld)
     {
-        return vWorld.normalized * vWorld.y;
+        return vWorld.normalized * (vWorld.y );
 
         ////var r = CircleRadius;
         //var r = vWorld.y;
@@ -156,9 +181,4 @@ public class BendAroundPlanet : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
