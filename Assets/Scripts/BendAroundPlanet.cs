@@ -222,4 +222,6 @@ public class BendAroundPlanet : MonoBehaviour
 
         DestroyImmediate(o);
     }
+
+    public GameObject GetTarget() { return Target; }
 }

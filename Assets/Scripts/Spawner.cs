@@ -2,25 +2,21 @@
 
 namespace Assets.Scripts
 {
-    public class Spawner : MonoBehaviour, ITimelineEntity
+    public class Spawner : BaseTimelineEntity
     {
-        [SerializeField]
-        private string id;
-
-        public string Id
-        {
-            get { return id; }
-            private set { id = value; }
-        }
-
         public void OnDrawGizmos()
         {
-            Gizmos.DrawSphere(transform.position, 1);
+            Gizmos.DrawSphere(GetComponent<BendAroundPlanet>().GetTarget().transform.position, 1);
         }
 
         public void OnDrawGizmosSelected()
         {
 
+        }
+
+        public void Spawn()
+        {
+            Debug.Log("Spawning!");
         }
     }
 }
