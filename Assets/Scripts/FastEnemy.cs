@@ -11,6 +11,7 @@ namespace Assets.Scripts
         public void Start()
         {
             body = GetComponent<Rigidbody>();
+            transform.position += Vector3.up * (PlanetConfig.Instance.WalkSphereRadius - transform.position.y);
         }
 
         public void Update()
