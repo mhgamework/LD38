@@ -1,0 +1,996 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><!--
+""" To recover the Python script to generate this SVG, delete the line above -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="-900 -65 2610 870">
+ <title>Comparison azimuthal projections</title>
+ <desc>Comparison of some azimuthal projections of the world map centred on the North Pole, ordered by mean altitudes in Earth radii, by CMG Lee based on information on http://www.progonos.com/furuti/MapProj/Normal/ProjAz/projAz.html . Circles denote latitudes of multiples of 15-degrees (dashed lines represent the southern hemisphere).</desc>
+ <style type="text/css">
+  #main { fill:none; stroke:none; stroke-linejoin:round; stroke-width:3; }
+  text  { font-size:30px; font-family:Arial,Helvetica,sans-serif; text-anchor:middle; }
+ </style>
+ <defs>
+  <radialGradient id="grad_earth" cx="50%" cy="25%" fx="50%" fy="33%" r="50%">
+   <stop offset="10%" stop-color="#ccffff"/>
+   <stop offset="90%" stop-color="#66ccff"/>
+  </radialGradient>
+  <linearGradient id="grad_mask_linear" x1="0%" x2="100%" y1="0%" y2="0%">
+   <stop offset="0%"    stop-color="#000000"/>
+   <stop offset="10%"   stop-color="#ffffff"/>
+   <stop offset="90%"   stop-color="#ffffff"/>
+   <stop offset="100%"  stop-color="#000000"/>
+  </linearGradient>
+
+  <mask id="mask_circles"><rect x="-290" y="-250" width="580" height="600" fill="url(#grad_mask_linear)"/></mask>
+  <mask id="mask_rays"   ><rect x="-250" y="-95"  width="500" height="200" fill="url(#grad_mask_linear)"/></mask>
+
+  <circle id="spot" cx="0" cy="0" r="5" stroke="#000000"/>
+  <path id="arrow" d="M 15,-5 L 0,0 L 15,5"/>
+<!-- BEGIN_DYNAMIC_SVG { -->
+  <g id="common">
+   <circle cx="0" cy="0" r="64" fill="url(#grad_earth)"/>
+   <path d="M -60,0 H 60 M -42,-45 H 42 M -42,45 H 42 M 0,-63 V 63 A 45,63 0 1 1 0.1,63" stroke="#ffffff" stroke-opacity="0.5"/>
+  </g>
+ </defs>
+ <circle cx="0" cy="0" r="99999" fill="#ffffff"/>
+ <g id="main">
+ <g transform="translate(-800,0)">
+  <text x="0" y="0" fill="#000000"><tspan>Orthographic</tspan><tspan x="0" dy="1em" font-style="italic">infinity</tspan></text>
+  <g transform="translate(0,130)" mask="url(#mask_rays)">
+   <use xlink:href="#common"/>
+    <g fill="#ff0000">
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(270)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(270)"/>
+    </g>
+    <path d="M -0,-64 L 0,-63710 L 0,-64" stroke="#ff0000"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-16,-64) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(-16,-62) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(16,-64) rotate(270)"/>
+     <use xlink:href="#arrow" transform="translate(16,-62) rotate(270)"/>
+    </g>
+    <path d="M -16,-62 L 0,-63710 L 16,-62" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-32,-64) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(-32,-55) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(32,-64) rotate(270)"/>
+     <use xlink:href="#arrow" transform="translate(32,-55) rotate(270)"/>
+    </g>
+    <path d="M -32,-55 L 0,-63710 L 32,-55" stroke="#cccccc"/>
+    <g fill="#cc9900">
+     <use xlink:href="#arrow" transform="translate(-45,-64) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(-45,-45) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(45,-64) rotate(270)"/>
+     <use xlink:href="#arrow" transform="translate(45,-45) rotate(270)"/>
+    </g>
+    <path d="M -45,-45 L 0,-63710 L 45,-45" stroke="#cc9900"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-55,-64) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(-55,-32) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(55,-64) rotate(270)"/>
+     <use xlink:href="#arrow" transform="translate(55,-32) rotate(270)"/>
+    </g>
+    <path d="M -55,-32 L 0,-63710 L 55,-32" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-61,-64) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(-62,-16) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(61,-64) rotate(270)"/>
+     <use xlink:href="#arrow" transform="translate(62,-16) rotate(270)"/>
+    </g>
+    <path d="M -62,-16 L 0,-63710 L 62,-16" stroke="#cccccc"/>
+   <use xlink:href="#spot" transform="translate(-64,-0)" fill="#000000"/>
+   <use xlink:href="#spot" transform="translate(64,-0)" fill="#000000"/>
+   <path d="M -61,-64 H 61 M -63.71,-0 A 63.71,64 0 0 1 64,-0" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(0,256)" mask="url(#mask_circles)">
+    <circle transform="rotate(90)" cx="0" cy="0" r="1" stroke="#ff0000"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="16" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="32" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="45" stroke="#cc9900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="55" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="61" stroke="#cccccc"/>
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="10">
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="45" dy="0.9em" fill="#cc9900">45&#176;N</text>
+  </g>
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="45" dy="0.9em" fill="#cc9900">45&#176;N</text>
+  </g>
+ </g>
+ <g transform="translate(-630,0)">
+  <text x="0" y="0" fill="#000000"><tspan>at GEO</tspan><tspan x="0" dy="1em" font-style="italic">5.62 R</tspan><tspan dy="0.1em" font-style="italic">E</tspan></text>
+  <g transform="translate(0,130)" mask="url(#mask_rays)">
+   <use xlink:href="#common"/>
+    <g fill="#ff0000">
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(270)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(270)"/>
+    </g>
+    <path d="M -0,-64 L 0,-422 L 0,-64" stroke="#ff0000"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-16,-64) rotate(-87)"/>
+     <use xlink:href="#arrow" transform="translate(-16,-62) rotate(-87)"/>
+     <use xlink:href="#arrow" transform="translate(16,-64) rotate(267)"/>
+     <use xlink:href="#arrow" transform="translate(16,-62) rotate(267)"/>
+    </g>
+    <path d="M -16,-62 L 0,-422 L 16,-62" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-31,-64) rotate(-85)"/>
+     <use xlink:href="#arrow" transform="translate(-32,-55) rotate(-85)"/>
+     <use xlink:href="#arrow" transform="translate(31,-64) rotate(265)"/>
+     <use xlink:href="#arrow" transform="translate(32,-55) rotate(265)"/>
+    </g>
+    <path d="M -32,-55 L 0,-422 L 32,-55" stroke="#cccccc"/>
+    <g fill="#cc9900">
+     <use xlink:href="#arrow" transform="translate(-43,-64) rotate(-83)"/>
+     <use xlink:href="#arrow" transform="translate(-45,-45) rotate(-83)"/>
+     <use xlink:href="#arrow" transform="translate(43,-64) rotate(263)"/>
+     <use xlink:href="#arrow" transform="translate(45,-45) rotate(263)"/>
+    </g>
+    <path d="M -45,-45 L 0,-422 L 45,-45" stroke="#cc9900"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-51,-64) rotate(-82)"/>
+     <use xlink:href="#arrow" transform="translate(-55,-32) rotate(-82)"/>
+     <use xlink:href="#arrow" transform="translate(51,-64) rotate(262)"/>
+     <use xlink:href="#arrow" transform="translate(55,-32) rotate(262)"/>
+    </g>
+    <path d="M -55,-32 L 0,-422 L 55,-32" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-54,-64) rotate(-81)"/>
+     <use xlink:href="#arrow" transform="translate(-62,-16) rotate(-81)"/>
+     <use xlink:href="#arrow" transform="translate(54,-64) rotate(261)"/>
+     <use xlink:href="#arrow" transform="translate(62,-16) rotate(261)"/>
+    </g>
+    <path d="M -62,-16 L 0,-422 L 62,-16" stroke="#cccccc"/>
+   <use xlink:href="#spot" transform="translate(-63,-10)" fill="#000000"/>
+   <use xlink:href="#spot" transform="translate(63,-10)" fill="#000000"/>
+   <path d="M -54,-64 H 54 M -62.98,-10 A 63.71,64 0 0 1 63,-10" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(0,256)" mask="url(#mask_circles)">
+    <circle transform="rotate(90)" cx="0" cy="0" r="1" stroke="#ff0000"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="16" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="31" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="43" stroke="#cc9900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="51" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="54" stroke="#cccccc"/>
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="10">
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="43" dy="0.9em" fill="#cc9900">45&#176;N</text>
+  </g>
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="43" dy="0.9em" fill="#cc9900">45&#176;N</text>
+  </g>
+ </g>
+ <g transform="translate(-470,0)">
+  <text x="0" y="0" fill="#000000"><tspan>MEO (GPS)</tspan><tspan x="0" dy="1em" font-style="italic">3.17 R</tspan><tspan dy="0.1em" font-style="italic">E</tspan></text>
+  <g transform="translate(0,130)" mask="url(#mask_rays)">
+   <use xlink:href="#common"/>
+    <g fill="#ff0000">
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(270)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(270)"/>
+    </g>
+    <path d="M -0,-64 L 0,-266 L 0,-64" stroke="#ff0000"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-16,-64) rotate(-85)"/>
+     <use xlink:href="#arrow" transform="translate(-16,-62) rotate(-85)"/>
+     <use xlink:href="#arrow" transform="translate(16,-64) rotate(265)"/>
+     <use xlink:href="#arrow" transform="translate(16,-62) rotate(265)"/>
+    </g>
+    <path d="M -16,-62 L 0,-266 L 16,-62" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-31,-64) rotate(-81)"/>
+     <use xlink:href="#arrow" transform="translate(-32,-55) rotate(-81)"/>
+     <use xlink:href="#arrow" transform="translate(31,-64) rotate(261)"/>
+     <use xlink:href="#arrow" transform="translate(32,-55) rotate(261)"/>
+    </g>
+    <path d="M -32,-55 L 0,-266 L 32,-55" stroke="#cccccc"/>
+    <g fill="#cc9900">
+     <use xlink:href="#arrow" transform="translate(-41,-64) rotate(-78)"/>
+     <use xlink:href="#arrow" transform="translate(-45,-45) rotate(-78)"/>
+     <use xlink:href="#arrow" transform="translate(41,-64) rotate(258)"/>
+     <use xlink:href="#arrow" transform="translate(45,-45) rotate(258)"/>
+    </g>
+    <path d="M -45,-45 L 0,-266 L 45,-45" stroke="#cc9900"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-48,-64) rotate(-77)"/>
+     <use xlink:href="#arrow" transform="translate(-55,-32) rotate(-77)"/>
+     <use xlink:href="#arrow" transform="translate(48,-64) rotate(257)"/>
+     <use xlink:href="#arrow" transform="translate(55,-32) rotate(257)"/>
+    </g>
+    <path d="M -55,-32 L 0,-266 L 55,-32" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-50,-64) rotate(-76)"/>
+     <use xlink:href="#arrow" transform="translate(-62,-16) rotate(-76)"/>
+     <use xlink:href="#arrow" transform="translate(50,-64) rotate(256)"/>
+     <use xlink:href="#arrow" transform="translate(62,-16) rotate(256)"/>
+    </g>
+    <path d="M -62,-16 L 0,-266 L 62,-16" stroke="#cccccc"/>
+   <use xlink:href="#spot" transform="translate(-62,-15)" fill="#000000"/>
+   <use xlink:href="#spot" transform="translate(62,-15)" fill="#000000"/>
+   <path d="M -50,-64 H 50 M -61.85,-15 A 63.71,64 0 0 1 62,-15" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(0,256)" mask="url(#mask_circles)">
+    <circle transform="rotate(90)" cx="0" cy="0" r="1" stroke="#ff0000"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="16" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="31" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="41" stroke="#cc9900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="48" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="50" stroke="#cccccc"/>
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="10">
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="41" dy="0.9em" fill="#cc9900">45&#176;N</text>
+  </g>
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="41" dy="0.9em" fill="#cc9900">45&#176;N</text>
+  </g>
+ </g>
+ <g transform="translate(-310,0)">
+  <text x="0" y="0" fill="#000000"><tspan>LEO (ISS)</tspan><tspan x="0" dy="1em" font-style="italic">0.05 R</tspan><tspan dy="0.1em" font-style="italic">E</tspan></text>
+  <g transform="translate(0,130)" mask="url(#mask_rays)">
+   <use xlink:href="#common"/>
+    <g fill="#ff0000">
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(-90)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(270)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(270)"/>
+    </g>
+    <path d="M -0,-64 L 0,-67 L 0,-64" stroke="#ff0000"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-10,-64) rotate(-18)"/>
+     <use xlink:href="#arrow" transform="translate(-16,-62) rotate(-18)"/>
+     <use xlink:href="#arrow" transform="translate(10,-64) rotate(198)"/>
+     <use xlink:href="#arrow" transform="translate(16,-62) rotate(198)"/>
+    </g>
+    <path d="M -16,-62 L 0,-67 L 16,-62" stroke="#cccccc"/>
+   <use xlink:href="#spot" transform="translate(-19,-61)" fill="#000000"/>
+   <use xlink:href="#spot" transform="translate(19,-61)" fill="#000000"/>
+   <path d="M -10,-64 H 10 M -19.43,-61 A 63.71,64 0 0 1 19,-61" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(0,256)" mask="url(#mask_circles)">
+    <circle transform="rotate(90)" cx="0" cy="0" r="1" stroke="#ff0000"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="10" stroke="#cccccc"/>
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="10">
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+  </g>
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+  </g>
+ </g>
+ <g transform="translate(0,0)">
+  <text x="0" y="0" fill="#000000"><tspan>Gnomonic</tspan><tspan x="0" dy="1em" font-style="italic">-1 R</tspan><tspan dy="0.1em" font-style="italic">E</tspan></text>
+  <g transform="translate(0,130)" mask="url(#mask_rays)">
+   <use xlink:href="#common"/>
+    <g fill="#ff0000">
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(90)"/>
+    </g>
+    <path d="M -0,-64 L 0,0 L 0,-64" stroke="#ff0000"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-17,-64) rotate(75)"/>
+     <use xlink:href="#arrow" transform="translate(-16,-62) rotate(75)"/>
+     <use xlink:href="#arrow" transform="translate(17,-64) rotate(105)"/>
+     <use xlink:href="#arrow" transform="translate(16,-62) rotate(105)"/>
+    </g>
+    <path d="M -17,-64 L 0,0 L 17,-64" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-37,-64) rotate(60)"/>
+     <use xlink:href="#arrow" transform="translate(-32,-55) rotate(60)"/>
+     <use xlink:href="#arrow" transform="translate(37,-64) rotate(120)"/>
+     <use xlink:href="#arrow" transform="translate(32,-55) rotate(120)"/>
+    </g>
+    <path d="M -37,-64 L 0,0 L 37,-64" stroke="#cccccc"/>
+    <g fill="#cc9900">
+     <use xlink:href="#arrow" transform="translate(-64,-64) rotate(45)"/>
+     <use xlink:href="#arrow" transform="translate(-45,-45) rotate(45)"/>
+     <use xlink:href="#arrow" transform="translate(64,-64) rotate(135)"/>
+     <use xlink:href="#arrow" transform="translate(45,-45) rotate(135)"/>
+    </g>
+    <path d="M -64,-64 L 0,0 L 64,-64" stroke="#cc9900"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-110,-64) rotate(30)"/>
+     <use xlink:href="#arrow" transform="translate(-55,-32) rotate(30)"/>
+     <use xlink:href="#arrow" transform="translate(110,-64) rotate(150)"/>
+     <use xlink:href="#arrow" transform="translate(55,-32) rotate(150)"/>
+    </g>
+    <path d="M -110,-64 L 0,0 L 110,-64" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-238,-64) rotate(15)"/>
+     <use xlink:href="#arrow" transform="translate(-62,-16) rotate(15)"/>
+     <use xlink:href="#arrow" transform="translate(238,-64) rotate(165)"/>
+     <use xlink:href="#arrow" transform="translate(62,-16) rotate(165)"/>
+    </g>
+    <path d="M -238,-64 L 0,0 L 238,-64" stroke="#cccccc"/>
+   <use xlink:href="#spot" transform="translate(-64,-0)" fill="none"/>
+   <use xlink:href="#spot" transform="translate(64,-0)" fill="none"/>
+   <path d="M -238,-64 H 238 M -63.71,-0 A 63.71,64 0 1 1 64,-0" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(0,450)" mask="url(#mask_circles)">
+    <circle transform="rotate(90)" cx="0" cy="0" r="1" stroke="#ff0000"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="17" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="37" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="64" stroke="#cc9900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="110" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="238" stroke="#cccccc"/>
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="10">
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="64" dy="0.9em" fill="#cc9900">45&#176;N</text>
+  </g>
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="64" dy="0.9em" fill="#cc9900">45&#176;N</text>
+  </g>
+ </g>
+ <g transform="translate(510,0)">
+  <text x="0" y="0" fill="#000000"><tspan>Stereographic</tspan><tspan x="0" dy="1em" font-style="italic">-2 R</tspan><tspan dy="0.1em" font-style="italic">E</tspan></text>
+  <g transform="translate(0,130)" mask="url(#mask_rays)">
+   <use xlink:href="#common"/>
+    <g fill="#ff0000">
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(90)"/>
+    </g>
+    <path d="M -0,-64 L 0,64 L 0,-64" stroke="#ff0000"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-17,-64) rotate(83)"/>
+     <use xlink:href="#arrow" transform="translate(-16,-62) rotate(83)"/>
+     <use xlink:href="#arrow" transform="translate(17,-64) rotate(97)"/>
+     <use xlink:href="#arrow" transform="translate(16,-62) rotate(97)"/>
+    </g>
+    <path d="M -17,-64 L 0,64 L 17,-64" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-34,-64) rotate(75)"/>
+     <use xlink:href="#arrow" transform="translate(-32,-55) rotate(75)"/>
+     <use xlink:href="#arrow" transform="translate(34,-64) rotate(105)"/>
+     <use xlink:href="#arrow" transform="translate(32,-55) rotate(105)"/>
+    </g>
+    <path d="M -34,-64 L 0,64 L 34,-64" stroke="#cccccc"/>
+    <g fill="#cc9900">
+     <use xlink:href="#arrow" transform="translate(-53,-64) rotate(68)"/>
+     <use xlink:href="#arrow" transform="translate(-45,-45) rotate(68)"/>
+     <use xlink:href="#arrow" transform="translate(53,-64) rotate(112)"/>
+     <use xlink:href="#arrow" transform="translate(45,-45) rotate(112)"/>
+    </g>
+    <path d="M -53,-64 L 0,64 L 53,-64" stroke="#cc9900"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-74,-64) rotate(60)"/>
+     <use xlink:href="#arrow" transform="translate(-55,-32) rotate(60)"/>
+     <use xlink:href="#arrow" transform="translate(74,-64) rotate(120)"/>
+     <use xlink:href="#arrow" transform="translate(55,-32) rotate(120)"/>
+    </g>
+    <path d="M -74,-64 L 0,64 L 74,-64" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-98,-64) rotate(52)"/>
+     <use xlink:href="#arrow" transform="translate(-62,-16) rotate(52)"/>
+     <use xlink:href="#arrow" transform="translate(98,-64) rotate(128)"/>
+     <use xlink:href="#arrow" transform="translate(62,-16) rotate(128)"/>
+    </g>
+    <path d="M -98,-64 L 0,64 L 98,-64" stroke="#cccccc"/>
+    <g fill="#009900">
+     <use xlink:href="#arrow" transform="translate(-127,-64) rotate(45)"/>
+     <use xlink:href="#arrow" transform="translate(-64,-0) rotate(45)"/>
+     <use xlink:href="#arrow" transform="translate(127,-64) rotate(135)"/>
+     <use xlink:href="#arrow" transform="translate(64,-0) rotate(135)"/>
+    </g>
+    <path d="M -127,-64 L 0,64 L 127,-64" stroke="#009900"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-166,-64) rotate(38)"/>
+     <use xlink:href="#arrow" transform="translate(-62,16) rotate(38)"/>
+     <use xlink:href="#arrow" transform="translate(166,-64) rotate(142)"/>
+     <use xlink:href="#arrow" transform="translate(62,16) rotate(142)"/>
+    </g>
+    <path d="M -166,-64 L 0,64 L 166,-64" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-221,-64) rotate(30)"/>
+     <use xlink:href="#arrow" transform="translate(-55,32) rotate(30)"/>
+     <use xlink:href="#arrow" transform="translate(221,-64) rotate(150)"/>
+     <use xlink:href="#arrow" transform="translate(55,32) rotate(150)"/>
+    </g>
+    <path d="M -221,-64 L 0,64 L 221,-64" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <g fill="#0000ff">
+     <use xlink:href="#arrow" transform="translate(-308,-64) rotate(22)"/>
+     <use xlink:href="#arrow" transform="translate(-45,45) rotate(22)"/>
+     <use xlink:href="#arrow" transform="translate(308,-64) rotate(158)"/>
+     <use xlink:href="#arrow" transform="translate(45,45) rotate(158)"/>
+    </g>
+    <path d="M -308,-64 L 0,64 L 308,-64" stroke="#0000ff" stroke-dasharray="10,10"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-476,-64) rotate(15)"/>
+     <use xlink:href="#arrow" transform="translate(-32,55) rotate(15)"/>
+     <use xlink:href="#arrow" transform="translate(476,-64) rotate(165)"/>
+     <use xlink:href="#arrow" transform="translate(32,55) rotate(165)"/>
+    </g>
+    <path d="M -476,-64 L 0,64 L 476,-64" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-968,-64) rotate(8)"/>
+     <use xlink:href="#arrow" transform="translate(-16,62) rotate(8)"/>
+     <use xlink:href="#arrow" transform="translate(968,-64) rotate(172)"/>
+     <use xlink:href="#arrow" transform="translate(16,62) rotate(172)"/>
+    </g>
+    <path d="M -968,-64 L 0,64 L 968,-64" stroke="#cccccc" stroke-dasharray="10,10"/>
+   <use xlink:href="#spot" transform="translate(-0,64)" fill="none"/>
+   <use xlink:href="#spot" transform="translate(0,64)" fill="none"/>
+   <path d="M -968,-64 H 968 M -0.05,64 A 63.71,64 0 1 1 0,64" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(0,450)" mask="url(#mask_circles)">
+    <circle transform="rotate(90)" cx="0" cy="0" r="1" stroke="#ff0000"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="17" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="34" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="53" stroke="#cc9900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="74" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="98" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="127" stroke="#009900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="166" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="221" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="308" stroke="#0000ff" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="476" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="968" stroke="#cccccc" stroke-dasharray="10,10"/>
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="10">
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="53" dy="0.9em" fill="#cc9900">45&#176;N</text>
+    <text x="0" y="127" dy="0.9em" fill="#009900">0&#176;</text>
+    <text x="0" y="308" dy="0.9em" fill="#0000ff">45&#176;S</text>
+  </g>
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="53" dy="0.9em" fill="#cc9900">45&#176;N</text>
+    <text x="0" y="127" dy="0.9em" fill="#009900">0&#176;</text>
+    <text x="0" y="308" dy="0.9em" fill="#0000ff">45&#176;S</text>
+  </g>
+ </g>
+ <g transform="translate(940,0)">
+  <text x="0" y="0" fill="#000000"><tspan>Twilight (Clarke)</tspan><tspan x="0" dy="1em" font-style="italic">-2.4 R</tspan><tspan dy="0.1em" font-style="italic">E</tspan></text>
+  <g transform="translate(0,130)" mask="url(#mask_rays)">
+   <use xlink:href="#common"/>
+    <g fill="#ff0000">
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(90)"/>
+    </g>
+    <path d="M -0,-64 L 0,89 L 0,-64" stroke="#ff0000"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-17,-64) rotate(84)"/>
+     <use xlink:href="#arrow" transform="translate(-16,-62) rotate(84)"/>
+     <use xlink:href="#arrow" transform="translate(17,-64) rotate(96)"/>
+     <use xlink:href="#arrow" transform="translate(16,-62) rotate(96)"/>
+    </g>
+    <path d="M -17,-64 L 0,89 L 17,-64" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-34,-64) rotate(78)"/>
+     <use xlink:href="#arrow" transform="translate(-32,-55) rotate(78)"/>
+     <use xlink:href="#arrow" transform="translate(34,-64) rotate(102)"/>
+     <use xlink:href="#arrow" transform="translate(32,-55) rotate(102)"/>
+    </g>
+    <path d="M -34,-64 L 0,89 L 34,-64" stroke="#cccccc"/>
+    <g fill="#cc9900">
+     <use xlink:href="#arrow" transform="translate(-51,-64) rotate(71)"/>
+     <use xlink:href="#arrow" transform="translate(-45,-45) rotate(71)"/>
+     <use xlink:href="#arrow" transform="translate(51,-64) rotate(109)"/>
+     <use xlink:href="#arrow" transform="translate(45,-45) rotate(109)"/>
+    </g>
+    <path d="M -51,-64 L 0,89 L 51,-64" stroke="#cc9900"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-70,-64) rotate(65)"/>
+     <use xlink:href="#arrow" transform="translate(-55,-32) rotate(65)"/>
+     <use xlink:href="#arrow" transform="translate(70,-64) rotate(115)"/>
+     <use xlink:href="#arrow" transform="translate(55,-32) rotate(115)"/>
+    </g>
+    <path d="M -70,-64 L 0,89 L 70,-64" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-89,-64) rotate(60)"/>
+     <use xlink:href="#arrow" transform="translate(-62,-16) rotate(60)"/>
+     <use xlink:href="#arrow" transform="translate(89,-64) rotate(120)"/>
+     <use xlink:href="#arrow" transform="translate(62,-16) rotate(120)"/>
+    </g>
+    <path d="M -89,-64 L 0,89 L 89,-64" stroke="#cccccc"/>
+    <g fill="#009900">
+     <use xlink:href="#arrow" transform="translate(-109,-64) rotate(54)"/>
+     <use xlink:href="#arrow" transform="translate(-64,-0) rotate(54)"/>
+     <use xlink:href="#arrow" transform="translate(109,-64) rotate(126)"/>
+     <use xlink:href="#arrow" transform="translate(64,-0) rotate(126)"/>
+    </g>
+    <path d="M -109,-64 L 0,89 L 109,-64" stroke="#009900"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-129,-64) rotate(50)"/>
+     <use xlink:href="#arrow" transform="translate(-62,16) rotate(50)"/>
+     <use xlink:href="#arrow" transform="translate(129,-64) rotate(130)"/>
+     <use xlink:href="#arrow" transform="translate(62,16) rotate(130)"/>
+    </g>
+    <path d="M -129,-64 L 0,89 L 129,-64" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-147,-64) rotate(46)"/>
+     <use xlink:href="#arrow" transform="translate(-55,32) rotate(46)"/>
+     <use xlink:href="#arrow" transform="translate(147,-64) rotate(134)"/>
+     <use xlink:href="#arrow" transform="translate(55,32) rotate(134)"/>
+    </g>
+    <path d="M -147,-64 L 0,89 L 147,-64" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <g fill="#0000ff">
+     <use xlink:href="#arrow" transform="translate(-156,-64) rotate(44)"/>
+     <use xlink:href="#arrow" transform="translate(-45,45) rotate(44)"/>
+     <use xlink:href="#arrow" transform="translate(156,-64) rotate(136)"/>
+     <use xlink:href="#arrow" transform="translate(45,45) rotate(136)"/>
+    </g>
+    <path d="M -156,-64 L 0,89 L 156,-64" stroke="#0000ff" stroke-dasharray="10,10"/>
+   <use xlink:href="#spot" transform="translate(-45,46)" fill="#000000"/>
+   <use xlink:href="#spot" transform="translate(45,46)" fill="#000000"/>
+   <path d="M -156,-64 H 156 M -44.59,46 A 63.71,64 0 1 1 45,46" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(0,450)" mask="url(#mask_circles)">
+    <circle transform="rotate(90)" cx="0" cy="0" r="1" stroke="#ff0000"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="17" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="34" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="51" stroke="#cc9900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="70" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="89" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="109" stroke="#009900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="129" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="147" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="156" stroke="#0000ff" stroke-dasharray="10,10"/>
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="10">
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="51" dy="0.9em" fill="#cc9900">45&#176;N</text>
+    <text x="0" y="109" dy="0.9em" fill="#009900">0&#176;</text>
+    <text x="0" y="156" dy="0.9em" fill="#0000ff">45&#176;S</text>
+  </g>
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="51" dy="0.9em" fill="#cc9900">45&#176;N</text>
+    <text x="0" y="109" dy="0.9em" fill="#009900">0&#176;</text>
+    <text x="0" y="156" dy="0.9em" fill="#0000ff">45&#176;S</text>
+  </g>
+ </g>
+ <g transform="translate(1270,0)">
+  <text x="0" y="0" fill="#000000"><tspan>James</tspan><tspan x="0" dy="1em" font-style="italic">-2.5 R</tspan><tspan dy="0.1em" font-style="italic">E</tspan></text>
+  <g transform="translate(0,130)" mask="url(#mask_rays)">
+   <use xlink:href="#common"/>
+    <g fill="#ff0000">
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(90)"/>
+    </g>
+    <path d="M -0,-64 L 0,96 L 0,-64" stroke="#ff0000"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-17,-64) rotate(84)"/>
+     <use xlink:href="#arrow" transform="translate(-16,-62) rotate(84)"/>
+     <use xlink:href="#arrow" transform="translate(17,-64) rotate(96)"/>
+     <use xlink:href="#arrow" transform="translate(16,-62) rotate(96)"/>
+    </g>
+    <path d="M -17,-64 L 0,96 L 17,-64" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-34,-64) rotate(78)"/>
+     <use xlink:href="#arrow" transform="translate(-32,-55) rotate(78)"/>
+     <use xlink:href="#arrow" transform="translate(34,-64) rotate(102)"/>
+     <use xlink:href="#arrow" transform="translate(32,-55) rotate(102)"/>
+    </g>
+    <path d="M -34,-64 L 0,96 L 34,-64" stroke="#cccccc"/>
+    <g fill="#cc9900">
+     <use xlink:href="#arrow" transform="translate(-51,-64) rotate(72)"/>
+     <use xlink:href="#arrow" transform="translate(-45,-45) rotate(72)"/>
+     <use xlink:href="#arrow" transform="translate(51,-64) rotate(108)"/>
+     <use xlink:href="#arrow" transform="translate(45,-45) rotate(108)"/>
+    </g>
+    <path d="M -51,-64 L 0,96 L 51,-64" stroke="#cc9900"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-69,-64) rotate(67)"/>
+     <use xlink:href="#arrow" transform="translate(-55,-32) rotate(67)"/>
+     <use xlink:href="#arrow" transform="translate(69,-64) rotate(113)"/>
+     <use xlink:href="#arrow" transform="translate(55,-32) rotate(113)"/>
+    </g>
+    <path d="M -69,-64 L 0,96 L 69,-64" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-87,-64) rotate(61)"/>
+     <use xlink:href="#arrow" transform="translate(-62,-16) rotate(61)"/>
+     <use xlink:href="#arrow" transform="translate(87,-64) rotate(119)"/>
+     <use xlink:href="#arrow" transform="translate(62,-16) rotate(119)"/>
+    </g>
+    <path d="M -87,-64 L 0,96 L 87,-64" stroke="#cccccc"/>
+    <g fill="#009900">
+     <use xlink:href="#arrow" transform="translate(-106,-64) rotate(56)"/>
+     <use xlink:href="#arrow" transform="translate(-64,-0) rotate(56)"/>
+     <use xlink:href="#arrow" transform="translate(106,-64) rotate(124)"/>
+     <use xlink:href="#arrow" transform="translate(64,-0) rotate(124)"/>
+    </g>
+    <path d="M -106,-64 L 0,96 L 106,-64" stroke="#009900"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-124,-64) rotate(52)"/>
+     <use xlink:href="#arrow" transform="translate(-62,16) rotate(52)"/>
+     <use xlink:href="#arrow" transform="translate(124,-64) rotate(128)"/>
+     <use xlink:href="#arrow" transform="translate(62,16) rotate(128)"/>
+    </g>
+    <path d="M -124,-64 L 0,96 L 124,-64" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-138,-64) rotate(49)"/>
+     <use xlink:href="#arrow" transform="translate(-55,32) rotate(49)"/>
+     <use xlink:href="#arrow" transform="translate(138,-64) rotate(131)"/>
+     <use xlink:href="#arrow" transform="translate(55,32) rotate(131)"/>
+    </g>
+    <path d="M -138,-64 L 0,96 L 138,-64" stroke="#cccccc" stroke-dasharray="10,10"/>
+   <use xlink:href="#spot" transform="translate(-47,42)" fill="#000000"/>
+   <use xlink:href="#spot" transform="translate(47,42)" fill="#000000"/>
+   <path d="M -138,-64 H 138 M -47.49,42 A 63.71,64 0 1 1 47,42" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(0,450)" mask="url(#mask_circles)">
+    <circle transform="rotate(90)" cx="0" cy="0" r="1" stroke="#ff0000"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="17" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="34" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="51" stroke="#cc9900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="69" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="87" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="106" stroke="#009900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="124" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="138" stroke="#cccccc" stroke-dasharray="10,10"/>
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="10">
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="51" dy="0.9em" fill="#cc9900">45&#176;N</text>
+    <text x="0" y="106" dy="0.9em" fill="#009900">0&#176;</text>
+  </g>
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="51" dy="0.9em" fill="#cc9900">45&#176;N</text>
+    <text x="0" y="106" dy="0.9em" fill="#009900">0&#176;</text>
+  </g>
+ </g>
+ <g transform="translate(1570,0)">
+  <text x="0" y="0" fill="#000000"><tspan>La Hire</tspan><tspan x="0" dy="1em" font-style="italic">-2.70710678119 R</tspan><tspan dy="0.1em" font-style="italic">E</tspan></text>
+  <g transform="translate(0,130)" mask="url(#mask_rays)">
+   <use xlink:href="#common"/>
+    <g fill="#ff0000">
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(-0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(90)"/>
+     <use xlink:href="#arrow" transform="translate(0,-64) rotate(90)"/>
+    </g>
+    <path d="M -0,-64 L 0,109 L 0,-64" stroke="#ff0000"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-17,-64) rotate(84)"/>
+     <use xlink:href="#arrow" transform="translate(-16,-62) rotate(84)"/>
+     <use xlink:href="#arrow" transform="translate(17,-64) rotate(96)"/>
+     <use xlink:href="#arrow" transform="translate(16,-62) rotate(96)"/>
+    </g>
+    <path d="M -17,-64 L 0,109 L 17,-64" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-34,-64) rotate(79)"/>
+     <use xlink:href="#arrow" transform="translate(-32,-55) rotate(79)"/>
+     <use xlink:href="#arrow" transform="translate(34,-64) rotate(101)"/>
+     <use xlink:href="#arrow" transform="translate(32,-55) rotate(101)"/>
+    </g>
+    <path d="M -34,-64 L 0,109 L 34,-64" stroke="#cccccc"/>
+    <g fill="#cc9900">
+     <use xlink:href="#arrow" transform="translate(-51,-64) rotate(74)"/>
+     <use xlink:href="#arrow" transform="translate(-45,-45) rotate(74)"/>
+     <use xlink:href="#arrow" transform="translate(51,-64) rotate(106)"/>
+     <use xlink:href="#arrow" transform="translate(45,-45) rotate(106)"/>
+    </g>
+    <path d="M -51,-64 L 0,109 L 51,-64" stroke="#cc9900"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-68,-64) rotate(69)"/>
+     <use xlink:href="#arrow" transform="translate(-55,-32) rotate(69)"/>
+     <use xlink:href="#arrow" transform="translate(68,-64) rotate(111)"/>
+     <use xlink:href="#arrow" transform="translate(55,-32) rotate(111)"/>
+    </g>
+    <path d="M -68,-64 L 0,109 L 68,-64" stroke="#cccccc"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-85,-64) rotate(64)"/>
+     <use xlink:href="#arrow" transform="translate(-62,-16) rotate(64)"/>
+     <use xlink:href="#arrow" transform="translate(85,-64) rotate(116)"/>
+     <use xlink:href="#arrow" transform="translate(62,-16) rotate(116)"/>
+    </g>
+    <path d="M -85,-64 L 0,109 L 85,-64" stroke="#cccccc"/>
+    <g fill="#009900">
+     <use xlink:href="#arrow" transform="translate(-101,-64) rotate(60)"/>
+     <use xlink:href="#arrow" transform="translate(-64,-0) rotate(60)"/>
+     <use xlink:href="#arrow" transform="translate(101,-64) rotate(120)"/>
+     <use xlink:href="#arrow" transform="translate(64,-0) rotate(120)"/>
+    </g>
+    <path d="M -101,-64 L 0,109 L 101,-64" stroke="#009900"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-115,-64) rotate(56)"/>
+     <use xlink:href="#arrow" transform="translate(-62,16) rotate(56)"/>
+     <use xlink:href="#arrow" transform="translate(115,-64) rotate(124)"/>
+     <use xlink:href="#arrow" transform="translate(62,16) rotate(124)"/>
+    </g>
+    <path d="M -115,-64 L 0,109 L 115,-64" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <g fill="#cccccc">
+     <use xlink:href="#arrow" transform="translate(-124,-64) rotate(54)"/>
+     <use xlink:href="#arrow" transform="translate(-55,32) rotate(54)"/>
+     <use xlink:href="#arrow" transform="translate(124,-64) rotate(126)"/>
+     <use xlink:href="#arrow" transform="translate(55,32) rotate(126)"/>
+    </g>
+    <path d="M -124,-64 L 0,109 L 124,-64" stroke="#cccccc" stroke-dasharray="10,10"/>
+   <use xlink:href="#spot" transform="translate(-52,37)" fill="#000000"/>
+   <use xlink:href="#spot" transform="translate(52,37)" fill="#000000"/>
+   <path d="M -124,-64 H 124 M -51.63,37 A 63.71,64 0 1 1 52,37" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(0,450)" mask="url(#mask_circles)">
+    <circle transform="rotate(90)" cx="0" cy="0" r="1" stroke="#ff0000"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="17" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="34" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="51" stroke="#cc9900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="68" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="85" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="101" stroke="#009900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="115" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="124" stroke="#cccccc" stroke-dasharray="10,10"/>
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="10">
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="51" dy="0.9em" fill="#cc9900">45&#176;N</text>
+    <text x="0" y="101" dy="0.9em" fill="#009900">0&#176;</text>
+  </g>
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="51" dy="0.9em" fill="#cc9900">45&#176;N</text>
+    <text x="0" y="101" dy="0.9em" fill="#009900">0&#176;</text>
+  </g>
+ </g>
+  <g fill="#000000">
+   <text x="-460" y="-40">Near-side general perspective</text>
+   <text x="1270" y="-40" >Far-side general perspective</text>
+  </g>
+  <g stroke="#000000">
+   <path d="M -690,-20 V -30 H -240 V -20"/>
+   <path d="M  780,-20 V -30 H 1700 V -20"/>
+  </g>
+ <g transform="translate(-685,0)">
+  <text x="0" y="370" fill="#000000"><tspan>Azimuthal equidistant</tspan></text>
+  <g transform="translate(0,575)" mask="url(#mask_circles)">
+    <circle transform="rotate(90)" cx="0" cy="0" r="1" stroke="#ff0000"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="17" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="33" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="50" stroke="#cc9900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="67" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="83" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="100" stroke="#009900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="117" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="133" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="150" stroke="#0000ff" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="167" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="183" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="200" stroke="#9900cc" stroke-dasharray="10,10"/>
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="10">
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="50" dy="0.9em" fill="#cc9900">45&#176;N</text>
+    <text x="0" y="100" dy="0.9em" fill="#009900">0&#176;</text>
+    <text x="0" y="150" dy="0.9em" fill="#0000ff">45&#176;S</text>
+    <text x="0" y="200" dy="0.9em" fill="#9900cc">90&#176;S</text>
+  </g>
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="50" dy="0.9em" fill="#cc9900">45&#176;N</text>
+    <text x="0" y="100" dy="0.9em" fill="#009900">0&#176;</text>
+    <text x="0" y="150" dy="0.9em" fill="#0000ff">45&#176;S</text>
+    <text x="0" y="200" dy="0.9em" fill="#9900cc">90&#176;S</text>
+  </g>
+ </g>
+ <g transform="translate(-350,0)">
+  <text x="0" y="370" fill="#000000"><tspan>Lambert</tspan><tspan x="0" dy="1em">azimuthal</tspan><tspan x="0" dy="1em">equal-area</tspan></text>
+  <g transform="translate(0,575)" mask="url(#mask_circles)">
+    <circle transform="rotate(90)" cx="0" cy="0" r="1" stroke="#ff0000"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="17" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="33" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="49" stroke="#cc9900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="64" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="78" stroke="#cccccc"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="90" stroke="#009900"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="101" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="110" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="118" stroke="#0000ff" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="123" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="126" stroke="#cccccc" stroke-dasharray="10,10"/>
+    <circle transform="rotate(90)" cx="0" cy="0" r="127" stroke="#9900cc" stroke-dasharray="10,10"/>
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="10">
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="49" dy="0.9em" fill="#cc9900">45&#176;N</text>
+    <text x="0" y="90" dy="0.9em" fill="#009900">0&#176;</text>
+    <text x="0" y="118" dy="0.9em" fill="#0000ff">45&#176;S</text>
+    <text x="0" y="142" dy="0.9em" fill="#9900cc">90&#176;S</text>
+  </g>
+    <text x="0" y="0" dy="0.9em" fill="#ff0000">90&#176;N</text>
+    <text x="0" y="49" dy="0.9em" fill="#cc9900">45&#176;N</text>
+    <text x="0" y="90" dy="0.9em" fill="#009900">0&#176;</text>
+    <text x="0" y="118" dy="0.9em" fill="#0000ff">45&#176;S</text>
+    <text x="0" y="142" dy="0.9em" fill="#9900cc">90&#176;S</text>
+  </g>
+ </g>
+ </g>
+<!-- } END_DYNAMIC_SVG -->
+</svg>
+<!-- Please retain this and other comments, which contain Python code to generate this SVG. """
+import re
+import math
+outs            = []
+out_plots       = []
+out_comparisons = []
+radius_earth = 63.71
+plots = [
+ {'label':'Orthographic'      , 'altitude':            999 , 'offset_x':-800 , 'offset_y':256},
+#{'label':'at Moon surface'   , 'altitude':             59 , 'offset_x':-630 , 'offset_y':256},
+ {'label':'at GEO'            , 'altitude':           5.62 , 'offset_x':-630 , 'offset_y':256},
+ {'label':'MEO (GPS)'         , 'altitude':           3.17 , 'offset_x':-470 , 'offset_y':256},
+ {'label':'LEO (ISS)'         , 'altitude':           0.05 , 'offset_x':-310 , 'offset_y':256},
+ {'label':'Gnomonic'          , 'altitude':             -1 , 'offset_x':   0 , 'offset_y':450},
+ {'label':'Stereographic'     , 'altitude':             -2 , 'offset_x': 510 , 'offset_y':450},
+ {'label':'Twilight (Clarke)' , 'altitude':           -2.4 , 'offset_x': 940 , 'offset_y':450},
+ {'label':'James'             , 'altitude':           -2.5 , 'offset_x':1270 , 'offset_y':450},
+ {'label':'La Hire'           , 'altitude':-2 - 0.5 ** 0.5 , 'offset_x':1570 , 'offset_y':450} ]
+comparisons = [
+ {'id':0,'offset_x':-685,'offset_y':575,'label':'Azimuthal equidistant',
+  'func':lambda x:(90 - x) * math.pi / 180 * radius_earth},
+ {'id':1,'offset_x':-350,'offset_y':575,'label':'Lambert\nazimuthal\nequal-area',
+  'func':lambda x:(2 * math.cos((90 + x) * math.pi / 180 / 2) * radius_earth)} ]
+latitudes = [
+ {'deg': 90 , 'colour':'#ff0000'},  #0000ff
+ {'deg': 75 , 'colour':'#cccccc'},  #0033ff
+ {'deg': 60 , 'colour':'#cccccc'},  #0033cc
+ {'deg': 45 , 'colour':'#cc9900'},  #006699
+ {'deg': 30 , 'colour':'#cccccc'},  #006666
+ {'deg': 15 , 'colour':'#cccccc'},  #009933
+ {'deg':  0 , 'colour':'#009900'},  #009900
+ {'deg':-15 , 'colour':'#cccccc'},  #339900
+ {'deg':-30 , 'colour':'#cccccc'},  #666600
+ {'deg':-45 , 'colour':'#0000ff'},  #996600
+ {'deg':-60 , 'colour':'#cccccc'},  #993300
+ {'deg':-75 , 'colour':'#cccccc'},  #cc3300
+ {'deg':-90 , 'colour':'#9900cc'} ] #cc0000
+
+def join(list, separator = ''): return separator.join(list).strip('\n')
+
+# Main plots
+for plot in plots:
+ print plot['label']
+ out_rays          = []
+ out_circles       = []
+ out_circle_labels = []
+ radius_circle_max = 0
+ altitude        = plot['altitude']
+ altitude_radius = altitude * radius_earth
+ if (altitude == -2):
+  latitude_min_rad = math.pi / -2.001 # Leave slight gap else arc is not drawn
+ elif (altitude > 0 or altitude < -2):
+  latitude_min_rad  = math.asin(1 / (1 + altitude))
+  latitude_min_fill = '#000000'
+ else:
+  latitude_min_rad = math.asin(1 + altitude)
+  latitude_min_fill = 'none'
+ if (altitude > -1):
+  latitude_min_arc = '0 0 1'
+ else:
+  latitude_min_arc = '0 1 1'
+ latitude_min_x = math.cos(latitude_min_rad) * radius_earth
+ latitude_min_y = math.sin(latitude_min_rad) * radius_earth
+ for latitude in latitudes:
+  colour       = latitude['colour']
+  latitude_deg = latitude['deg']
+  latitude_rad = latitude_deg * math.pi / 180
+  if (latitude_rad > latitude_min_rad):
+   radius_circle = ( altitude_radius * radius_earth * math.cos(latitude_rad) /
+                    (altitude_radius - radius_earth * (math.sin(latitude_rad) - 1)))
+   if (radius_circle >= 0):
+    arrow_x = radius_earth * math.cos(latitude_rad)
+    arrow_y = radius_earth * math.sin(latitude_rad)
+    arrow_deg = math.atan((arrow_y - altitude_radius - radius_earth) / arrow_x) * 180 / math.pi
+    label_altitude = '%s R</tspan><tspan dy="0.1em" font-style="italic">E' % (altitude) if (altitude < 999) else 'infinity'
+    label_latitude = '%d&#176;%s' % (
+     abs(latitude_deg), '' if (latitude_deg == 0) else ('N' if (latitude_deg > 0) else 'S'))
+    stroke = 'stroke="%s"%s' % (
+     colour, ' stroke-dasharray="10,10"' if (latitude_deg < 0) else '')
+    fill   = 'fill="%s"' % (colour)
+    out_rays.append('''
+    <g %s>
+     <use xlink:href="#arrow" transform="translate(%.0f,%.0f) rotate(%.0f)"/>
+     <use xlink:href="#arrow" transform="translate(%.0f,%.0f) rotate(%.0f)"/>
+     <use xlink:href="#arrow" transform="translate(%.0f,%.0f) rotate(%.0f)"/>
+     <use xlink:href="#arrow" transform="translate(%.0f,%.0f) rotate(%.0f)"/>
+    </g>
+    <path d="M %.0f,%.0f L 0,%.0f L %.0f,%.0f" %s/>''' %
+     (fill, -radius_circle, -radius_earth, arrow_deg, -arrow_x, -arrow_y, arrow_deg,
+      radius_circle, -radius_earth, 180 - arrow_deg, arrow_x, -arrow_y, 180 - arrow_deg,
+      -radius_circle if (altitude < 0) else -arrow_x,
+      -radius_earth  if (altitude < 0) else -arrow_y,
+      -altitude_radius - radius_earth,
+       radius_circle if (altitude < 0) else  arrow_x,
+      -radius_earth  if (altitude < 0) else -arrow_y,
+      stroke))
+    out_circles.append('''
+    <circle transform="rotate(90)" cx="0" cy="0" r="%.0f" %s/>''' %
+     (max(radius_circle, 1), stroke))
+    if (latitude_deg % 45 == 0):
+     out_circle_labels.append('''
+    <text x="0" y="%.0f" dy="0.9em" %s>%s</text>''' %
+      (radius_circle, fill, label_latitude))
+    if (radius_circle_max < radius_circle):
+     radius_circle_max = radius_circle
+ out_plots.append('''
+ <g transform="translate(%d,0)">
+  <text x="0" y="0" fill="#000000"><tspan>%s</tspan><tspan x="0" dy="1em" font-style="italic">%s</tspan></text>
+  <g transform="translate(0,130)" mask="url(#mask_rays)">
+   <use xlink:href="#common"/>
+%s
+   <use xlink:href="#spot" transform="translate(%.0f,%.0f)" fill="%s"/>
+   <use xlink:href="#spot" transform="translate(%.0f,%.0f)" fill="%s"/>
+   <path d="M %.0f,%.0f H %.0f M %.2f,%.0f A %.2f,%.0f %s %.0f,%.0f" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(0,%d)" mask="url(#mask_circles)">
+%s
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="10">
+%s
+  </g>
+%s
+  </g>
+ </g>''' %
+  (plot['offset_x'], plot['label'], label_altitude, join(out_rays),
+   -latitude_min_x, -latitude_min_y, latitude_min_fill, latitude_min_x, -latitude_min_y, latitude_min_fill,
+   -radius_circle_max, -radius_earth, radius_circle_max,
+   -latitude_min_x, -latitude_min_y, radius_earth, radius_earth, latitude_min_arc, latitude_min_x, -latitude_min_y,
+   plot['offset_y'], join(out_circles), join(out_circle_labels), join(out_circle_labels)))
+
+# Comparisons
+for comparison in comparisons:
+ print comparison['label']
+ out_circles       = []
+ out_circle_labels = []
+ for latitude in latitudes:
+  colour       = latitude['colour']
+  latitude_deg = latitude['deg']
+  radius_circle = comparison['func'](latitude_deg)
+  label_latitude = '%d&#176;%s' % (
+   abs(latitude_deg), '' if (latitude_deg == 0) else ('N' if (latitude_deg > 0) else 'S'))
+  stroke = 'stroke="%s"%s' % (
+   colour, ' stroke-dasharray="10,10"' if (latitude_deg < 0) else '')
+  fill   = 'fill="%s"' % (colour)
+  out_circles.append('''
+    <circle transform="rotate(90)" cx="0" cy="0" r="%.0f" %s/>''' %
+    (max(radius_circle, 1), stroke))
+  if (latitude_deg % 45 == 0):
+   out_circle_labels.append('''
+    <text x="0" y="%.0f" dy="0.9em" %s>%s</text>''' %
+    (radius_circle if (latitude_deg > -90 or comparison['id'] != 1) else (radius_circle + 15),
+     fill, label_latitude))
+ out_comparisons.append('''
+ <g transform="translate(%d,0)">
+  <text x="0" y="370" fill="#000000"><tspan>%s</tspan></text>
+  <g transform="translate(0,%d)" mask="url(#mask_circles)">
+%s
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="10">
+%s
+  </g>
+%s
+  </g>
+ </g>''' %
+  (comparison['offset_x'], re.sub('\n', '</tspan><tspan x="0" dy="1em">', comparison['label']),
+   comparison['offset_y'], join(out_circles), join(out_circle_labels), join(out_circle_labels)))
+
+# Compile into outs
+outs.append('''
+  <g id="common">
+   <circle cx="0" cy="0" r="%.0f" fill="url(#grad_earth)"/>
+   <path d="M -60,0 H 60 M -42,-45 H 42 M -42,45 H 42 M 0,-63 V 63 A 45,63 0 1 1 0.1,63" stroke="#ffffff" stroke-opacity="0.5"/>
+  </g>
+ </defs>
+ <circle cx="0" cy="0" r="99999" fill="#ffffff"/>
+ <g id="main">
+%s
+  <g fill="#000000">
+   <text x="-460" y="-40">Near-side general perspective</text>
+   <text x="1270" y="-40" >Far-side general perspective</text>
+  </g>
+  <g stroke="#000000">
+   <path d="M -690,-20 V -30 H -240 V -20"/>
+   <path d="M  780,-20 V -30 H 1700 V -20"/>
+  </g>
+%s
+ </g>''' % (radius_earth, join(out_plots), join(out_comparisons)))
+
+# Code to compile everything into a .svg file follows...
+double_dash = '-' + '-' # because SVG comments cannot have 2 consecutive '-'s
+myself      = open(__file__, 'r').read() # the contents of this very file
+file_out    = open(re.sub(r'\..*?$', '', __file__) + '.svg', 'w') # *.* -> *.svg
+try: # use try/finally so that file is closed even if write fails
+ file_out.write(
+  '''<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><!%s
+%s''' % (double_dash,
+         re.sub(r'(BEGIN[_]DYNAMIC_SVG.*\n?)[\s\S]*(\n.*END[_]DYNAMIC_SVG)',
+                r'\1\n%s\2' % (''.join(outs).strip('\n')),
+                myself))) # replace dynamic SVG block with contents of "outs"
+finally:
+ file_out.close()
+# SVG-Python near-polyglot framework by CMG Lee (Oct 2014) -->
