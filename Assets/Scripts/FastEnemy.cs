@@ -16,11 +16,16 @@ namespace Assets.Scripts
 
         public void Update()
         {
+            Debug.DrawLine(transform.position, transform.position + body.velocity,Color.green);
 
             var diff = Player.position - transform.position;
 
-            body.velocity = diff.normalized * MovementSpeed;
-
+            var right = Vector3.Cross(transform.position.normalized, diff.normalized).normalized;
+          
+            var toTarget = Vector3.Cross(right, transform.position.normalized).normalized;
+            Debug.DrawLine(transform.position, transform.position + right, Color.red);
+            Debug.DrawLine(transform.position, transform.position + toTarget, Color.blue);
+            body.velocity = toTarget * MovementSpeed;
             body.position = body.position.normalized * PlanetConfig.Instance.WalkSphereRadius;
 
             //transform.forward = body.velocity;

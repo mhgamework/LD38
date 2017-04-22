@@ -35,8 +35,8 @@ public class PlanetCamera : MonoBehaviour
         dir = dir.normalized;
 
 
-        var right = Vector3.Cross(Camera.main.transform.forward, RigidBody.position.normalized);
-        var forward = Vector3.Cross(RigidBody.position.normalized, right);
+        var right = Vector3.Cross(Camera.main.transform.forward, RigidBody.position.normalized).normalized;
+        var forward = Vector3.Cross(RigidBody.position.normalized, right).normalized;
 
         Debug.DrawLine(RigidBody.position, RigidBody.position + right,Color.red);
         Debug.DrawLine(RigidBody.position, RigidBody.position + forward,Color.blue);

@@ -21,10 +21,17 @@ namespace Assets.Scripts
 
         public IEnumerable<YieldInstruction> begin()
         {
+
+            //for (int i = 0; i < 100; i++)
+            {
                 TimelineService.Instance.Get<Spawner>("Area1").Spawn(Enemy);
 
-            yield return new WaitForSeconds(1);
-            TimelineService.Instance.Get<Spawner>("Area2").Spawn(Enemy);
+                yield return new WaitForSeconds(0.5f);
+                TimelineService.Instance.Get<Spawner>("Area2").Spawn(Enemy);
+                yield return new WaitForSeconds(0.5f);
+
+            }
+
 
         }
     }
