@@ -27,7 +27,7 @@ public class OnUnityLoad
                 Debug.Log("[TO SIMON] This is not default Unity behaviour");
 
                 EditorApplication.SaveScene();
-                EditorApplication.SaveAssets();
+                AssetDatabase.SaveAssets();
             }
 
         };
