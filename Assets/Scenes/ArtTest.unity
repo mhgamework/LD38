@@ -369,15 +369,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 840d31f0bd2fd3141bef8ec9dc7656fa, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.40304315
+      value: 0.66105205
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 840d31f0bd2fd3141bef8ec9dc7656fa, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.4030431
+      value: 0.66105187
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 840d31f0bd2fd3141bef8ec9dc7656fa, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.4030431
+      value: 0.66105187
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 840d31f0bd2fd3141bef8ec9dc7656fa, type: 3}
       propertyPath: m_Materials.Array.data[0]
