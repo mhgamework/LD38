@@ -43,9 +43,12 @@ public class BendAroundPlanet : MonoBehaviour
             if (opt && !opt.BendMesh)
                 continue;
 
-            var mesh = filter.mesh;
-
-
+            var mesh = new Mesh
+            {
+                vertices = filter.sharedMesh.vertices,
+                triangles = filter.sharedMesh.triangles,
+                uv = filter.sharedMesh.uv
+            };
             var verts = mesh.vertices
                 .Select(v =>
                     {
@@ -56,6 +59,7 @@ public class BendAroundPlanet : MonoBehaviour
                 ).ToList();
 
             mesh.SetVertices(verts);
+            filter.sharedMesh = mesh;
         }
 
         foreach (var b in obj.GetComponentsInChildren<BendTransform>())
@@ -72,7 +76,7 @@ public class BendAroundPlanet : MonoBehaviour
 
 
             //bendTransform(filter.transform);
-            var mesh = filter.mesh;
+            var mesh = filter.sharedMesh;
 
             var verts = mesh.vertices
                 .Select(v => { return filter.transform.InverseTransformPoint(v); }
@@ -104,7 +108,7 @@ public class BendAroundPlanet : MonoBehaviour
         Target.transform.localPosition += new Vector3(0, CircleRadius, 0); //* CircleRadius;
 
         bendAllMeshes(Target.transform);
-        Target.transform.SetParent(transform,false);
+        Target.transform.SetParent(transform, false);
         Target.name += " - Bended";
 
     }
@@ -135,7 +139,7 @@ public class BendAroundPlanet : MonoBehaviour
 
     private Vector3 bendVertexWorldSpace(Vector3 vWorld)
     {
-        return vWorld.normalized * (vWorld.y );
+        return vWorld.normalized * (vWorld.y);
 
         ////var r = CircleRadius;
         //var r = vWorld.y;
