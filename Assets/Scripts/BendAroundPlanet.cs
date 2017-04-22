@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 [ExecuteInEditMode]
+[SelectionBase]
 public class BendAroundPlanet : MonoBehaviour
 {
 
@@ -18,6 +20,16 @@ public class BendAroundPlanet : MonoBehaviour
     private GameObject LastSource;
     [SerializeField]
     private GameObject Target;
+
+    [SerializeField]
+    [Range(0.1f, 10f)]
+    private float scale = 1f;
+    [SerializeField]
+    [Range(0f, 360f)]
+    private float rotation = 0f;
+
+    private float lastRotation = 1f;
+    private float lastScale = 1f;
     //public bool reset = false;
     // Use this for initialization
     void Start()
@@ -100,16 +112,24 @@ public class BendAroundPlanet : MonoBehaviour
     public void Update()
     {
         if (Target == null && Source == null) return;
-        if (Target != null && Source != null && Source == LastSource) return;
+        if (Target != null && Source != null && Source == LastSource && scale == lastScale && lastRotation == rotation) return;
         LastSource = Source;
+        lastScale = scale;
+        lastRotation = rotation;
         if (Target != null) DestroyImmediate(Target);
         if (Source == null) return;
         Target = Instantiate(Source);
         Target.transform.localPosition += new Vector3(0, CircleRadius, 0); //* CircleRadius;
+        Target.transform.localScale = Vector3.Scale(new Vector3(scale, 1f, scale), Target.transform.localScale);
+        Target.transform.localEulerAngles += new Vector3(0f, rotation, 0f);
+
 
         bendAllMeshes(Target.transform);
         Target.transform.SetParent(transform, false);
         Target.name += " - Bended";
+        Target.SetActive(true);
+
+
 
     }
 
@@ -184,5 +204,22 @@ public class BendAroundPlanet : MonoBehaviour
         return angle;
     }
 
+    public void PlaceObject(Ray ray)
+    {
+        var o = new GameObject("Sphere");
+        var sphere = o.AddComponent<SphereCollider>();
+        sphere.radius = CircleRadius;
 
+        RaycastHit hit;
+        if (!sphere.Raycast(ray, out hit, 1000))
+        {
+            DestroyImmediate(o);
+            return;
+        }
+
+        var dir = hit.point.normalized;
+        transform.up = dir;
+
+        DestroyImmediate(o);
+    }
 }
