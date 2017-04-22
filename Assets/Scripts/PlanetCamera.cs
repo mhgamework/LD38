@@ -12,9 +12,15 @@ public class PlanetCamera : MonoBehaviour
     [SerializeField]
     private float radius = 10.3f;
 
+    [SerializeField]
+    private PlanetCameraDirectorManager directorManager = null;
+
+    private Vector3 currentCameraDirection;
+
     // Use this for initialization
     void Start()
     {
+        currentCameraDirection = Camera.main.transform.forward;
     }
 
     // Update is called once per frame
@@ -29,7 +35,6 @@ public class PlanetCamera : MonoBehaviour
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             dir += new Vector2(0, -1);
 
-
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             dir += new Vector2(-1, 0);
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
@@ -37,7 +42,13 @@ public class PlanetCamera : MonoBehaviour
 
         dir = dir.normalized;
 
-        var f = Vector3.one; //Camera.main.transform.forward;
+        Vector3 new_dir;
+        if (directorManager.GetDirection(RigidBody.transform.position, out new_dir))
+        {
+            currentCameraDirection = Vector3.Lerp(currentCameraDirection, new_dir, 0.01f);
+        }
+        
+        var f = currentCameraDirection; //Camera.main.transform.forward;
         var right = Vector3.Cross(f, RigidBody.position.normalized).normalized;
         var forward = Vector3.Cross(RigidBody.position.normalized, right).normalized;
 
