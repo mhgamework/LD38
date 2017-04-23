@@ -29,8 +29,6 @@ public class PlanetCamera : MonoBehaviour
     [Range(0, 2)]
     public float PanMultiplierY = 0.5f;
 
-    public Vector3 PlayerLookDirection { get { return WizardModel.forward; } }
-
     // Use this for initialization
     void Start()
     {
@@ -58,11 +56,12 @@ public class PlanetCamera : MonoBehaviour
             WizardModel.LookAt(mouseTargetWorldPos, WizardModel.transform.position.normalized);
         }
 
-        var rel = Camera.main.ScreenToViewportPoint(Input.mousePosition) * 2 - Vector3.one;
+        var rel = Camera.main.ScreenToViewportPoint(Input.mousePosition) *2 - Vector3.one;
+        //Debug.Log(rel);
         rel = new Vector3(Mathf.Clamp(rel.x, -1, 1), Mathf.Clamp(rel.y, -1, 1), rel.z);
         rel = Vector3.Scale(rel, new Vector3(PanMultiplierX, PanMultiplierY, 1));
 
-        CameraPanner.localPosition = new Vector3(rel.x, rel.y, 0);
+        CameraPanner.localPosition = new Vector3( rel.x, rel.y, 0);
 
 
 
