@@ -57,7 +57,7 @@ public class PlanetCamera : MonoBehaviour
         }
 
         var rel = Camera.main.ScreenToViewportPoint(Input.mousePosition) *2 - Vector3.one;
-        Debug.Log(rel);
+        //Debug.Log(rel);
         rel = new Vector3(Mathf.Clamp(rel.x, -1, 1), Mathf.Clamp(rel.y, -1, 1), rel.z);
         rel = Vector3.Scale(rel, new Vector3(PanMultiplierX, PanMultiplierY, 1));
 

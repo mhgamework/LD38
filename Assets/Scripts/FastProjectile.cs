@@ -24,6 +24,7 @@ namespace Assets.Scripts
             MovementDirection = Vector3.Cross(Vector3.Cross(pos, MovementDirection), pos).normalized;
 
             rigidbody.velocity = MovementDirection * MovementSpeed;
+            transform.right = MovementDirection;
         }
 
         public void OnCollisionEnter(Collision collision)
