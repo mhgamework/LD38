@@ -29,6 +29,8 @@ public class PlanetCamera : MonoBehaviour
     [Range(0, 2)]
     public float PanMultiplierY = 0.5f;
 
+    public Vector3 PlayerLookDirection { get { return WizardModel.forward; } }
+
     // Use this for initialization
     void Start()
     {

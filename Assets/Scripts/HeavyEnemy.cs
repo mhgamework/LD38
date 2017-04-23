@@ -40,7 +40,6 @@ namespace Assets.Scripts
                 while (!airbourne) yield return new WaitForSeconds(0);
                 do
                 {
-                    Debug.Log("Airborne");
                     Debug.DrawLine(transform.position, transform.position + body.velocity, Color.green);
 
                     var diff = Player.position - transform.position;
@@ -80,7 +79,6 @@ namespace Assets.Scripts
                 } while (animator.GetCurrentAnimatorStateInfo(0).IsTag("walk"));
                 body.velocity = new Vector3();
 
-                Debug.Log("Landed");
 
                 yield return new WaitForSeconds(JumpInterval);
 
