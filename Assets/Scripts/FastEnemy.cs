@@ -2,11 +2,13 @@
 
 namespace Assets.Scripts
 {
-    public class FastEnemy : MonoBehaviour
+    public class FastEnemy : MonoBehaviour, IEnemy
     {
         public Transform Player;
         private Rigidbody body;
         public float MovementSpeed = 1;
+
+        public float Health = 3;
 
         public void Start()
         {
@@ -16,6 +18,7 @@ namespace Assets.Scripts
 
         public void Update()
         {
+            
             Debug.DrawLine(transform.position, transform.position + body.velocity,Color.green);
 
             var diff = Player.position - transform.position;
@@ -34,6 +37,12 @@ namespace Assets.Scripts
 
             transform.LookAt(body.position + body.velocity, transform.position.normalized);
 
+        }
+
+        public void TakeDamage(float amount)
+        {
+            Health -= amount;
+            if (Health <= 0) Destroy(gameObject);
         }
     }
 }
