@@ -13,7 +13,7 @@ namespace Assets.Scripts
         public void Start()
         {
             body = GetComponent<Rigidbody>();
-            transform.position += Vector3.up * (PlanetConfig.Instance.WalkSphereRadius - transform.position.y);
+            transform.position = transform.position.normalized * PlanetConfig.Instance.WalkSphereRadius;
         }
 
         public void Update()
