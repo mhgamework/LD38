@@ -6,7 +6,12 @@ namespace Assets.Scripts
     {
         public void OnDrawGizmos()
         {
-            Gizmos.DrawSphere(GetComponent<BendAroundPlanet>().GetTarget().transform.position, 1);
+            Gizmos.DrawSphere(getSpawnPosition(), 1);
+        }
+
+        private Vector3 getSpawnPosition()
+        {
+            return GetComponent<BendAroundPlanet>().GetTarget().transform.position;
         }
 
         public void OnDrawGizmosSelected()
@@ -14,9 +19,11 @@ namespace Assets.Scripts
 
         }
 
-        public void Spawn()
+        public void Spawn(GameObject obj)
         {
             Debug.Log("Spawning!");
+            var newObj = Instantiate(obj);
+            newObj.transform.up = getSpawnPosition().normalized;
         }
     }
 }

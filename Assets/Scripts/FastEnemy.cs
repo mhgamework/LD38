@@ -1,0 +1,39 @@
+﻿using UnityEngine;
+
+namespace Assets.Scripts
+{
+    public class FastEnemy : MonoBehaviour
+    {
+        public Transform Player;
+        private Rigidbody body;
+        public float MovementSpeed = 1;
+
+        public void Start()
+        {
+            body = GetComponent<Rigidbody>();
+            transform.position += Vector3.up * (PlanetConfig.Instance.WalkSphereRadius - transform.position.y);
+        }
+
+        public void Update()
+        {
+            Debug.DrawLine(transform.position, transform.position + body.velocity,Color.green);
+
+            var diff = Player.position - transform.position;
+
+            var right = Vector3.Cross(transform.position.normalized, diff.normalized).normalized;
+          
+            var toTarget = Vector3.Cross(right, transform.position.normalized).normalized;
+            Debug.DrawLine(transform.position, transform.position + right, Color.red);
+            Debug.DrawLine(transform.position, transform.position + toTarget, Color.blue);
+            body.velocity = toTarget * MovementSpeed;
+            body.position = body.position.normalized * PlanetConfig.Instance.WalkSphereRadius;
+
+            //transform.forward = body.velocity;
+
+            //transform.up = transform.position.normalized;
+
+            transform.LookAt(body.position + body.velocity, transform.position.normalized);
+
+        }
+    }
+}
