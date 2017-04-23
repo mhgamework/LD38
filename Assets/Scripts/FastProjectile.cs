@@ -28,10 +28,11 @@ namespace Assets.Scripts
 
         public void OnCollisionEnter(Collision collision)
         {
+            Destroy(gameObject);
+
             var enemy = EnemiesHelper.GetEnemyForCollider(collision.collider);
             if (enemy == null) return;
             enemy.TakeDamage(DamageOnHit);
-            Destroy(gameObject);
         }
     }
 }

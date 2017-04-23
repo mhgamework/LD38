@@ -69,6 +69,7 @@ namespace Assets.Scripts
                 var end = (point + dir * step).normalized * SphereRadius;
 
                 var ray = new Ray(start, (end - start).normalized);
+                Debug.DrawLine(start, end, Color.red);
 
                 if (Physics.Raycast(ray, out hitInfo, (end - start).magnitude + 0.001f))
                 {
@@ -81,7 +82,6 @@ namespace Assets.Scripts
                 point = end;
                 dir = Vector3.Cross(Vector3.Cross(point, dir), point).normalized;
 
-                //Debug.DrawLine(start, end, Color.red, 3);
 
 
             }
