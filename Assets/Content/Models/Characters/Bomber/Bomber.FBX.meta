@@ -43,6 +43,28 @@ ModelImporter:
     100070: Group002
     100072: Group003
     100074: Group004
+    100076: Body01
+    100078: Body02
+    100080: Body03
+    100082: Brow01
+    100084: Brow02
+    100086: Canon
+    100088: Eye01
+    100090: Eye02
+    100092: Iris01
+    100094: Iris02
+    100096: Limb01
+    100098: Limb02
+    100100: Limb03
+    100102: Limb04
+    100104: Mouth001
+    100106: Tooth016
+    100108: Tooth017
+    100110: Tooth018
+    100112: Tooth019
+    100114: Tooth020
+    100116: Tooth021
+    100118: Tooth022
     400000: //RootNode
     400002: Box045
     400004: Box046
@@ -81,6 +103,28 @@ ModelImporter:
     400070: Group002
     400072: Group003
     400074: Group004
+    400076: Body01
+    400078: Body02
+    400080: Body03
+    400082: Brow01
+    400084: Brow02
+    400086: Canon
+    400088: Eye01
+    400090: Eye02
+    400092: Iris01
+    400094: Iris02
+    400096: Limb01
+    400098: Limb02
+    400100: Limb03
+    400102: Limb04
+    400104: Mouth001
+    400106: Tooth016
+    400108: Tooth017
+    400110: Tooth018
+    400112: Tooth019
+    400114: Tooth020
+    400116: Tooth021
+    400118: Tooth022
     2300000: Box045
     2300002: Box046
     2300004: Box047
@@ -114,6 +158,29 @@ ModelImporter:
     2300060: Box086
     2300062: Box087
     2300064: Cylinder001
+    2300066: Body01
+    2300068: Body02
+    2300070: Body03
+    2300072: //RootNode
+    2300074: Brow01
+    2300076: Brow02
+    2300078: Canon
+    2300080: Eye01
+    2300082: Eye02
+    2300084: Iris01
+    2300086: Iris02
+    2300088: Limb01
+    2300090: Limb02
+    2300092: Limb03
+    2300094: Limb04
+    2300096: Mouth001
+    2300098: Tooth016
+    2300100: Tooth017
+    2300102: Tooth018
+    2300104: Tooth019
+    2300106: Tooth020
+    2300108: Tooth021
+    2300110: Tooth022
     3300000: Box045
     3300002: Box046
     3300004: Box047
@@ -147,6 +214,29 @@ ModelImporter:
     3300060: Box086
     3300062: Box087
     3300064: Cylinder001
+    3300066: Body01
+    3300068: Body02
+    3300070: Body03
+    3300072: //RootNode
+    3300074: Brow01
+    3300076: Brow02
+    3300078: Canon
+    3300080: Eye01
+    3300082: Eye02
+    3300084: Iris01
+    3300086: Iris02
+    3300088: Limb01
+    3300090: Limb02
+    3300092: Limb03
+    3300094: Limb04
+    3300096: Mouth001
+    3300098: Tooth016
+    3300100: Tooth017
+    3300102: Tooth018
+    3300104: Tooth019
+    3300106: Tooth020
+    3300108: Tooth021
+    3300110: Tooth022
     4300000: Box064
     4300002: Box065
     4300004: Box045
@@ -180,9 +270,32 @@ ModelImporter:
     4300060: Box049
     4300062: Box050
     4300064: Box051
+    4300066: BomberRoot
+    4300068: Body01
+    4300070: Mouth001
+    4300072: Tooth016
+    4300074: Tooth017
+    4300076: Tooth018
+    4300078: Tooth019
+    4300080: Tooth020
+    4300082: Tooth021
+    4300084: Tooth022
+    4300086: Eye01
+    4300088: Iris01
+    4300090: Eye02
+    4300092: Iris02
+    4300094: Brow01
+    4300096: Brow02
+    4300098: Limb01
+    4300100: Limb03
+    4300102: Canon
+    4300104: Body03
+    4300106: Body02
+    4300108: Limb02
+    4300110: Limb04
     9500000: //RootNode
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
