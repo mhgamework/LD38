@@ -29,7 +29,7 @@ public class BendAroundPlanet : MonoBehaviour
     [SerializeField]
     [Range(0f, 360f)]
     private float rotation = 0f;
-
+    
     private float lastRotation = 1f;
     private float lastScale = 1f;
     //public bool reset = false;
@@ -118,7 +118,15 @@ public class BendAroundPlanet : MonoBehaviour
         LastSource = Source;
         lastScale = scale;
         lastRotation = rotation;
-        if (Target != null) DestroyImmediate(Target);
+
+        BuildMesh();
+    }
+
+    private void BuildMesh()
+    {
+        if (Target != null)
+            DestroyImmediate(Target);
+
         if (Source == null) return;
         Target = Instantiate(Source);
         Target.transform.localPosition += new Vector3(0, CircleRadius, 0); //* CircleRadius;
@@ -132,9 +140,6 @@ public class BendAroundPlanet : MonoBehaviour
         Target.transform.SetParent(transform, false);
         Target.name += " - Bended";
         Target.SetActive(true);
-
-
-
     }
 
     private void bendTransform(Transform t)
