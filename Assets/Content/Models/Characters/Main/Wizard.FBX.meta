@@ -18,6 +18,20 @@ ModelImporter:
     100020: Box015
     100022: Box016
     100024: //RootNode
+    100026: Arm01
+    100028: Arm02
+    100030: Body
+    100032: Cap
+    100034: Eye01
+    100036: Eye02
+    100038: EyeBrow01
+    100040: EyeBrow02
+    100042: Foot01
+    100044: Foot02
+    100046: Hand01
+    100048: Hand02
+    100050: Head
+    100052: Mouth
     400000: Box002
     400002: Box003
     400004: Box006
@@ -31,6 +45,20 @@ ModelImporter:
     400020: Box015
     400022: Box016
     400024: //RootNode
+    400026: Arm01
+    400028: Arm02
+    400030: Body
+    400032: Cap
+    400034: Eye01
+    400036: Eye02
+    400038: EyeBrow01
+    400040: EyeBrow02
+    400042: Foot01
+    400044: Foot02
+    400046: Hand01
+    400048: Hand02
+    400050: Head
+    400052: Mouth
     2300000: Box002
     2300002: Box003
     2300004: Box006
@@ -43,6 +71,21 @@ ModelImporter:
     2300018: Box014
     2300020: Box015
     2300022: Box016
+    2300024: //RootNode
+    2300026: Arm01
+    2300028: Arm02
+    2300030: Body
+    2300032: Cap
+    2300034: Eye01
+    2300036: Eye02
+    2300038: EyeBrow01
+    2300040: EyeBrow02
+    2300042: Foot01
+    2300044: Foot02
+    2300046: Hand01
+    2300048: Hand02
+    2300050: Head
+    2300052: Mouth
     3300000: Box002
     3300002: Box003
     3300004: Box006
@@ -55,6 +98,21 @@ ModelImporter:
     3300018: Box014
     3300020: Box015
     3300022: Box016
+    3300024: //RootNode
+    3300026: Arm01
+    3300028: Arm02
+    3300030: Body
+    3300032: Cap
+    3300034: Eye01
+    3300036: Eye02
+    3300038: EyeBrow01
+    3300040: EyeBrow02
+    3300042: Foot01
+    3300044: Foot02
+    3300046: Hand01
+    3300048: Hand02
+    3300050: Head
+    3300052: Mouth
     4300000: Box006
     4300002: Box007
     4300004: Box011
@@ -67,9 +125,24 @@ ModelImporter:
     4300018: Box015
     4300020: Box012
     4300022: Box008
+    4300024: WizardRoot
+    4300026: Body
+    4300028: Arm01
+    4300030: Hand01
+    4300032: Arm02
+    4300034: Hand02
+    4300036: Foot01
+    4300038: Foot02
+    4300040: Head
+    4300042: Cap
+    4300044: EyeBrow02
+    4300046: EyeBrow01
+    4300048: Eye02
+    4300050: Eye01
+    4300052: Mouth
     9500000: //RootNode
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
