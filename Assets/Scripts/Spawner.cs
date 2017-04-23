@@ -25,7 +25,7 @@ namespace Assets.Scripts
 
         public void Spawn(GameObject obj)
         {
-            Debug.Log("Spawning!");
+            Debug.Log("Spawning! " + obj.name);
             var newObj = Instantiate(obj);
             newObj.transform.position = getSpawnPosition();
             //newObj.transform.up = getSpawnPosition().normalized;

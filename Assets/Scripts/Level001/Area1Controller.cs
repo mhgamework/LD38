@@ -13,6 +13,8 @@ namespace Assets.Scripts.Level001
         public void Start()
         {
             StartCoroutine(begin().GetEnumerator());
+            GetComponent<BendAroundPlanet>().GetTarget().gameObject.SetActive(false);
+
         }
 
         public IEnumerable<YieldInstruction> begin()
@@ -30,7 +32,13 @@ namespace Assets.Scripts.Level001
 
             //resumeMovement();
 
-            yield return new WaitForSeconds(0);
+            while (Get<TimelineEnemyDetector>("EnemyDetector").Any(e => e.HasEnemies)) yield return null;
+
+            yield return new WaitForSeconds(1f);
+
+
+            foreach (var g in Get<Gate>("Gate2")) g.OpenGate();
+            yield return null;
         }
 
 
@@ -58,8 +66,16 @@ namespace Assets.Scripts.Level001
             if (cache.TryGetValue(name, out ret)) return ret.OfType<T>();
 
             ret = Root.GetComponentsInChildren<ITimelineEntity>().Where(o => ((MonoBehaviour)o).name == name).ToArray();
+            ret =
+                ret.Concat(
+                    ret.OfType<TimelineParent>()
+                        .SelectMany(t => ((MonoBehaviour)t).GetComponentsInChildren<ITimelineEntity>())).ToArray();
             cache[name] = ret;
-            return ret.OfType<T>();
+            var realRet = ret.OfType<T>().ToList();
+            if (!realRet.Any())
+                Debug.LogError("Did not find any object with name " + name + " and type " + typeof(T).Name);
+
+            return realRet;
 
         }
     }

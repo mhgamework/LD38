@@ -22,8 +22,10 @@ public class BendAroundPlanet : MonoBehaviour
     private GameObject Target;
 
     [SerializeField]
-    [Range(0.1f, 10f)]
+    [Range(0.1f, 20f)]
     private float scale = 1f;
+    public float Scale { get { return scale; } }
+
     [SerializeField]
     private bool uniformScale = false;
     [SerializeField]
