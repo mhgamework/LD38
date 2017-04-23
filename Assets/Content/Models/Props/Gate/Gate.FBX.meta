@@ -1,0 +1,119 @@
+fileFormatVersion: 2
+guid: 460470e6621d9b2409393fb96a1ca6ba
+timeCreated: 1492971235
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ForceField
+    100002: //RootNode
+    100004: PillarContainer
+    100006: PillarContainer004
+    100008: PillarContainer005
+    100010: PillarContainer006
+    100012: PillarContainer007
+    100014: PillarContainer01
+    100016: PillarContainer02
+    100018: PillarContainer03
+    400000: ForceField
+    400002: //RootNode
+    400004: PillarContainer
+    400006: PillarContainer004
+    400008: PillarContainer005
+    400010: PillarContainer006
+    400012: PillarContainer007
+    400014: PillarContainer01
+    400016: PillarContainer02
+    400018: PillarContainer03
+    2300000: ForceField
+    2300002: PillarContainer004
+    2300004: PillarContainer005
+    2300006: PillarContainer006
+    2300008: PillarContainer01
+    2300010: PillarContainer02
+    2300012: PillarContainer03
+    3300000: ForceField
+    3300002: PillarContainer004
+    3300004: PillarContainer005
+    3300006: PillarContainer006
+    3300008: PillarContainer01
+    3300010: PillarContainer02
+    3300012: PillarContainer03
+    4300000: ForceField
+    4300002: PillarContainer005
+    4300004: PillarContainer004
+    4300006: PillarContainer006
+    4300008: PillarContainer02
+    4300010: PillarContainer01
+    4300012: PillarContainer03
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
