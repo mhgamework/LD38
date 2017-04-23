@@ -6,9 +6,7 @@ namespace Assets.Scripts
     public class HeavyEnemy : MonoBehaviour, IEnemy
     {
         public Animator animator;
-        public Transform Player;
         private Rigidbody body;
-        public GameObject ProjectileTemplate;
         public float MovementSpeed = 1;
 
         public float RotationSpeed = 90;
@@ -17,15 +15,15 @@ namespace Assets.Scripts
 
         public float JumpInterval = 2;
 
-        private Vector3 lookDir;
         private Vector3 toTarget;
         private bool airbourne = false;
+        private PlanetCamera planetCamera;
 
         public void Start()
         {
+            planetCamera = PlanetCamera.Instance;
             body = GetComponent<Rigidbody>();
             transform.position = transform.position.normalized * PlanetConfig.Instance.WalkSphereRadius;
-            lookDir = transform.forward;
             StartCoroutine(begin().GetEnumerator());
         }
 
@@ -42,7 +40,7 @@ namespace Assets.Scripts
                 {
                     Debug.DrawLine(transform.position, transform.position + body.velocity, Color.green);
 
-                    var diff = Player.position - transform.position;
+                    var diff = planetCamera.PlayerPosition - transform.position;
 
                     var right = Vector3.Cross(transform.position.normalized, diff.normalized).normalized;
 

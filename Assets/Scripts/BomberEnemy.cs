@@ -5,7 +5,6 @@ namespace Assets.Scripts
     public class BomberEnemy : MonoBehaviour, IEnemy
     {
         public Animator animator;
-        public Transform Player;
         private Rigidbody body;
         public GameObject ProjectileTemplate;
         public float MovementSpeed = 1;
@@ -16,11 +15,13 @@ namespace Assets.Scripts
 
         private Vector3 lookDir;
         private Vector3 toTarget;
+        private PlanetCamera planetCamera;
 
         public void Start()
         {
             body = GetComponent<Rigidbody>();
             transform.position = transform.position.normalized * PlanetConfig.Instance.WalkSphereRadius;
+            planetCamera = PlanetCamera.Instance;
             lookDir = transform.forward;
         }
 
@@ -34,7 +35,7 @@ namespace Assets.Scripts
             var isWalking = info.IsTag("walk");
             var isAttacking = info.IsTag("attack");
 
-            var diff = Player.position - transform.position;
+            var diff = planetCamera.PlayerPosition - transform.position;
             var right = Vector3.Cross(transform.position.normalized, diff.normalized).normalized;
             toTarget = Vector3.Cross(right, transform.position.normalized).normalized;
 

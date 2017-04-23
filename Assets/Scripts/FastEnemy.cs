@@ -4,16 +4,18 @@ namespace Assets.Scripts
 {
     public class FastEnemy : MonoBehaviour, IEnemy
     {
-        public Transform Player;
         private Rigidbody body;
         public float MovementSpeed = 1;
 
         public float Health = 3;
+        private PlanetCamera planetCamera;
 
         public void Start()
         {
             body = GetComponent<Rigidbody>();
             transform.position = transform.position.normalized * PlanetConfig.Instance.WalkSphereRadius;
+            planetCamera = PlanetCamera.Instance;
+
         }
 
         public void Update()
@@ -21,7 +23,7 @@ namespace Assets.Scripts
             
             Debug.DrawLine(transform.position, transform.position + body.velocity,Color.green);
 
-            var diff = Player.position - transform.position;
+            var diff = planetCamera.PlayerPosition - transform.position;
 
             var right = Vector3.Cross(transform.position.normalized, diff.normalized).normalized;
           

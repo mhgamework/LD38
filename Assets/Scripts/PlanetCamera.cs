@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlanetCamera : MonoBehaviour
+public class PlanetCamera : Singleton<PlanetCamera>
 {
     public Rigidbody RigidBody;
 
@@ -30,6 +30,7 @@ public class PlanetCamera : MonoBehaviour
     public float PanMultiplierY = 0.5f;
 
     public Vector3 PlayerLookDirection { get { return WizardModel.forward; } }
+    public Vector3 PlayerPosition { get { return WizardModel.transform.position; } }
 
     // Use this for initialization
     void Start()

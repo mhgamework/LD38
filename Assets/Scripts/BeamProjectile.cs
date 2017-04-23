@@ -147,7 +147,7 @@ namespace Assets.Scripts
             {
                 if (i > bolts.Count - 1)
                 {
-                    var o = Instantiate(lightningPrefab.gameObject);
+                    var o = Instantiate(lightningPrefab.gameObject,transform);
                     o.SetActive(true);
                     var o_bolt = o.GetComponent<LightningBoltScript>();
                     o_bolt.ChaosFactor = Random.value * 0.25f + 0.1f;
