@@ -16,12 +16,12 @@ namespace Assets.Scripts
 
         public void Register(ITimelineEntity entity)
         {
-            dict[entity.Id] = entity;
+            //dict[entity.Id] = entity;
         }
 
         public void UnRegister(ITimelineEntity entity)
         {
-            dict.Remove(entity.Id);
+            //dict.Remove(entity.Id);
 
         }
 

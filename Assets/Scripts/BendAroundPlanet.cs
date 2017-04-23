@@ -113,6 +113,8 @@ public class BendAroundPlanet : MonoBehaviour
 
     public void Update()
     {
+        if (Application.isPlaying) return;
+
         if (Target == null && Source == null) return;
         if (Target != null && Source != null && Source == LastSource && scale == lastScale && lastRotation == rotation) return;
         LastSource = Source;

@@ -4,6 +4,10 @@ namespace Assets.Scripts
 {
     public class Spawner : BaseTimelineEntity
     {
+        public void Start()
+        {
+            GetComponent<BendAroundPlanet>().GetTarget().SetActive(false);
+        }
         public void OnDrawGizmos()
         {
             Gizmos.DrawSphere(getSpawnPosition(), 1);
@@ -23,7 +27,8 @@ namespace Assets.Scripts
         {
             Debug.Log("Spawning!");
             var newObj = Instantiate(obj);
-            newObj.transform.up = getSpawnPosition().normalized;
+            newObj.transform.position = getSpawnPosition();
+            //newObj.transform.up = getSpawnPosition().normalized;
         }
     }
 }

@@ -9,12 +9,12 @@ namespace Assets.Scripts
 
         public void OnEnable()
         {
-            OnEnable(this);
+            //OnEnable(this);
         }
 
         public void OnDisable()
         {
-            OnDisable(this);
+            //OnDisable(this);
         }
 
         public static void OnEnable(ITimelineEntity entity)

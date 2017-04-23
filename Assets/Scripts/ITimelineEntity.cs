@@ -2,6 +2,6 @@
 {
     public interface ITimelineEntity
     {
-        string Id { get; }
+        //string Id { get; }
     }
 }
