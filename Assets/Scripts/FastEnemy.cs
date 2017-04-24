@@ -18,6 +18,8 @@ namespace Assets.Scripts
         public float StrikeInterval = 2;
         private Vector3 toTarget;
 
+        public GameObject OnDeathAnim;
+
         public void Start()
         {
             body = GetComponent<Rigidbody>();
@@ -109,7 +111,14 @@ namespace Assets.Scripts
         public void TakeDamage(float amount)
         {
             Health -= amount;
-            if (Health <= 0) Destroy(gameObject);
+            if (Health <= 0)
+            {
+                Destroy(gameObject);
+                var inst = Instantiate(OnDeathAnim);
+                inst.gameObject.SetActive(true);
+                inst.transform.position = transform.position;
+                inst.transform.up = OnDeathAnim.transform.position.normalized;
+            }
         }
     }
 }
