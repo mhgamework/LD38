@@ -1,12 +1,25 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Scripts
 {
-    public class DummyEnemy : AEnemy
+    public class DummyEnemy : FastEnemy
     {
-        protected override void Start()
+        [Serializable]
+        public class KilledEventHandler : UnityEvent { }
+        public KilledEventHandler OnKilled = new KilledEventHandler();
+
+        [SerializeField]
+        private eDamageType damageWeakness = eDamageType.UNSPECIFIED;
+
+        public override void TakeDamage(float amount, eDamageType type)
         {
-            base.Start();
+            if (type == damageWeakness)
+                base.TakeDamage(amount, type);
+
+            if (Health <= 0f)
+                OnKilled.Invoke();
         }
     }
 }

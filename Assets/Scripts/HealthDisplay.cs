@@ -8,7 +8,7 @@ public class HealthDisplay : MonoBehaviour
     private RectTransform healthRect = null;
     [SerializeField]
     [Tooltip("The canvas width of a single health unit.")]
-    private int widthPerHealthUnit = 50;
+    private int widthPerHealthUnit = 100;
 
     private float totalHealth;
     private float currentHealth;
@@ -25,10 +25,11 @@ public class HealthDisplay : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void Initialize(float health, Transform parent_transform, float heigth)
+    public void Initialize(float health, Transform parent_transform, float heigth, int widthPerHealthUnit = 50)
     {
         isInitialized = true;
 
+        this.widthPerHealthUnit = widthPerHealthUnit;
         totalHealth = health;
         currentHealth = health;
 
@@ -55,6 +56,6 @@ public class HealthDisplay : MonoBehaviour
 
     private Vector2 toSizeDelta(float health_value)
     {
-        return new Vector2(100f * health_value, 50);
+        return new Vector2(widthPerHealthUnit * health_value, 50);
     }
 }

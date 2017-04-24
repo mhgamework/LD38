@@ -132,7 +132,7 @@ namespace Assets.Scripts
 
             CurrentDamage += CurrentDamage * DamageIncreaseSpeedMultiplier * Time.deltaTime; // This does not really seem correct, since it is an exponential integral
             CurrentDamage = Mathf.Min(CurrentDamage, DamageMax);
-            enemy.TakeDamage(CurrentDamage);
+            enemy.TakeDamage(CurrentDamage, eDamageType.BEAM);
         }
 
         private void UpdateParticles()

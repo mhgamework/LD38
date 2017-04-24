@@ -91,7 +91,7 @@ namespace Assets.Scripts
             var enemies = inside.Select(f => EnemiesHelper.GetEnemyForCollider(f)).Where(item => item != null);
             foreach (var e in enemies)
             {
-                e.TakeDamage(ExplosionDamage);
+                e.TakeDamage(ExplosionDamage, eDamageType.FIRE);
                 ((MonoBehaviour)e).GetComponent<Rigidbody>()
                     .AddExplosionForce(ExplosionForce, transform.position, ExplosionRadius);
             }

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4753600811236122}
   - component: {fileID: 120080284540380272}
   - component: {fileID: 114209192617752274}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SimpleLightningBoltPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4268425761409130}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BeamSpellGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 114782787997960372}
   - component: {fileID: 82492485612745230}
   - component: {fileID: 164189983378485180}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -2,6 +2,6 @@
 {
     public interface IEnemy
     {
-        void TakeDamage(float amount);
+        void TakeDamage(float amount, eDamageType type);
     }
 }

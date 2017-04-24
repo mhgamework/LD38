@@ -9,17 +9,19 @@ public class AEnemy : MonoBehaviour, IEnemy
     private HealthDisplay healthDisplayPrefab = null;
     [SerializeField]
     private float healthDisplaySpawnHeight = 3f;
+    [SerializeField]
+    private int healthDisplayHealthUnitWidth = 100;
 
     private HealthDisplay healthDisplay;
 
     protected virtual void Start()
     {
         healthDisplay = Instantiate(healthDisplayPrefab);
-        healthDisplay.Initialize(Health, transform, healthDisplaySpawnHeight);
+        healthDisplay.Initialize(Health, transform, healthDisplaySpawnHeight, healthDisplayHealthUnitWidth);
     }
 
 
-    public void TakeDamage(float amount)
+    public virtual void TakeDamage(float amount, eDamageType type)
     {
         Health -= amount;
         if (Health <= 0)

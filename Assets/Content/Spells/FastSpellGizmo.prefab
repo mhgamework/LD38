@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4548835089233114}
   - component: {fileID: 198825682041015436}
   - component: {fileID: 199289122536901446}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 33610628167918646}
   - component: {fileID: 23011845101214600}
   - component: {fileID: 135083875555262796}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Icycle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4277894584103858}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FastSpellGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 54234205057814834}
   - component: {fileID: 82277133194017438}
   - component: {fileID: 164114692670764376}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Icycle Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
