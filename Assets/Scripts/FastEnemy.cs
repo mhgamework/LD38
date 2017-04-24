@@ -44,7 +44,7 @@ namespace Assets.Scripts
         {
             for (;;)
             {
-                Debug.Log("Walking");
+                //Debug.Log("Walking");
 
                 while (getDistToPlayer() > StrikeDistanceToStart)
                 {
@@ -59,7 +59,7 @@ namespace Assets.Scripts
                 yield return null;
 
                 var time = 0f;
-                Debug.Log("Charge");
+                //Debug.Log("Charge");
 
                 while (time < StrikeChargeDuration)
                 {
@@ -70,12 +70,12 @@ namespace Assets.Scripts
 
                 if (getDistToPlayer() < StrikeRange)
                 {
-                    Debug.Log("Strike");
+                    //Debug.Log("Strike");
 
                     // Strike!
                     PlayerHealthScript.Instance.TakeDamage(StrikeDamage);
                 }
-                Debug.Log("tired");
+                //Debug.Log("tired");
 
                 while (time < StrikeInterval)
                 {

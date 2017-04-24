@@ -22,9 +22,12 @@ public class BendAroundPlanet : MonoBehaviour
     private GameObject Target;
 
     [SerializeField]
+    private float scaleMultiplier = 1f;
+
+    [SerializeField]
     [Range(0.1f, 20f)]
     private float scale = 1f;
-    public float Scale { get { return scale; } }
+    public float Scale { get { return scale*scaleMultiplier; } }
 
     [SerializeField]
     private bool uniformScale = false;
@@ -118,9 +121,9 @@ public class BendAroundPlanet : MonoBehaviour
         if (Application.isPlaying) return;
 
         if (Target == null && Source == null) return;
-        if (Target != null && Source != null && Source == LastSource && scale == lastScale && lastRotation == rotation) return;
+        if (Target != null && Source != null && Source == LastSource && Scale == lastScale && lastRotation == rotation) return;
         LastSource = Source;
-        lastScale = scale;
+        lastScale = Scale;
         lastRotation = rotation;
 
         BuildMesh();
@@ -135,8 +138,8 @@ public class BendAroundPlanet : MonoBehaviour
         Target = Instantiate(Source);
         Target.transform.localPosition += new Vector3(0, CircleRadius, 0); //* CircleRadius;
 
-        var y_scale = uniformScale ? scale : 1f;
-        Target.transform.localScale = Vector3.Scale(new Vector3(scale, y_scale, scale), Target.transform.localScale);
+        var y_scale = uniformScale ? Scale : 1f;
+        Target.transform.localScale = Vector3.Scale(new Vector3(Scale, y_scale, Scale), Target.transform.localScale);
         Target.transform.localEulerAngles += new Vector3(0f, rotation, 0f);
 
 

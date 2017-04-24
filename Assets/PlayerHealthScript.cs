@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using Assets.Scripts.Level001;
 using UnityEngine;
 
@@ -47,6 +48,6 @@ public class PlayerHealthScript : Singleton<PlayerHealthScript>
 
     private void Die()
     {
-        Area1Controller.Instance.RestoreCheckpoint();
+        TimelineService.Instance.RestoreCheckpoint();
     }
 }

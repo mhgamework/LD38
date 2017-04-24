@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Assets.Scripts
@@ -9,6 +10,55 @@ namespace Assets.Scripts
     /// </summary>
     public class TimelineService : Singleton<TimelineService>
     {
+
+        public TimelineTrigger ActiveCheckpoint { get; private set; }
+        private Action activeCheckpointReset;
+
+        public void ActivateCheckpoint(TimelineTrigger id, Action reset)
+        {
+            //if (ActiveCheckpoint == id)
+            //{
+            //    Debug.LogError("Did not complete past checkpoint before starting the next one!");
+            //}
+            activeCheckpointReset = reset;
+            ActiveCheckpoint = id;
+        }
+
+        ///// <summary>
+        ///// TODO, maybe always just take the last checkpoint?
+        ///// </summary>
+        ///// <param name="id"></param>
+        //public void CompleteCheckpoint(object id)
+        //{
+        //    if (ActiveCheckpoint != id)
+        //        Debug.LogError("Deactivating another checkpoint then the one currently running!");
+        //    ActiveCheckpoint = null;
+        //}
+
+        public void RestoreCheckpoint()
+        {
+            if (ActiveCheckpoint == null)
+            {
+                // Not in checkpoint !!
+                Debug.Log("error, not in checkpoint");
+                return;
+            }
+            //StopCoroutine(coroutine);
+            //if (!done)
+            //{
+            PlanetCamera.Instance.PlayerPosition = ActiveCheckpoint.Position;
+            PlayerHealthScript.Instance.Health = PlayerHealthScript.Instance.MaxHealth;
+            foreach (var e in FindObjectsOfType<AEnemy>())
+                //.Concat(FindObjectsOfType<FastEnemy>().Cast<MonoBehaviour>())
+                //.Concat(FindObjectsOfType<HeavyEnemy>());
+                Destroy(e.gameObject);
+            activeCheckpointReset();
+            //StartCoroutine(begin().GetEnumerator());
+            //}
+
+        }
+
+
         private Dictionary<string, ITimelineEntity> dict = new Dictionary<string, ITimelineEntity>();
         public event Action OnStart;
 
