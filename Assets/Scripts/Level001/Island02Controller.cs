@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Level001
 {
-    public class Island02Controller : Singleton<Island02Controller>
+    public class Island02Controller : MonoBehaviour
     {
 
         private bool done = false;

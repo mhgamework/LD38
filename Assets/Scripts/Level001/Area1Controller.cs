@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Level001
 {
-    public class Area1Controller : Singleton<Area1Controller>
+    public class Area1Controller : MonoBehaviour
     {
 
         private bool done = false;
