@@ -102,8 +102,6 @@ namespace Assets.Scripts
                 dir = Vector3.Cross(Vector3.Cross(point, dir), point).normalized;
 
                 Debug.DrawLine(start, end, Color.red);
-
-
             }
 
 #if UNITY_EDITOR

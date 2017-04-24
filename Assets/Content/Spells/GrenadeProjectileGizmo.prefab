@@ -644,7 +644,7 @@ MonoBehaviour:
   InitialAngle: 45
   SphereRadius: 67
   ExplosionRadius: 10
-  ExplosionDamage: 1
+  ExplosionDamage: 5
   ExplosionForce: 2000
   boulderMesh: {fileID: 23731719863156586}
   toStopOnExplode:
