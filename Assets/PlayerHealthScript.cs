@@ -30,7 +30,7 @@ public class PlayerHealthScript : Singleton<PlayerHealthScript>
     {
         Debug.Log("Auch!");
         Health -= strikeDamage;
-        if (Health < 0)
+        if (Health <= 0)
             Die();
     }
 

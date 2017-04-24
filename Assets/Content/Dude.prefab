@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 114373592066604768}
   - component: {fileID: 114368533000074294}
   - component: {fileID: 114073461802791374}
+  - component: {fileID: 114439482203112738}
   m_Layer: 0
   m_Name: Dude
   m_TagString: Untagged
@@ -669,14 +670,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1915082260117670}
-  m_LocalRotation: {x: -0.4113776, y: 0.1927323, z: -0.034240287, w: 0.89019686}
+  m_LocalRotation: {x: 0.0034912594, y: -0.0012049372, z: 0.006749964, w: 0.99997044}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4727132063181104}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 314.01, y: 392.305, z: -18.419}
+  m_LocalEulerAnglesHint: {x: 0.40100002, y: -0.135, z: 0.77300006}
 --- !u!4 &4981776043608790
 Transform:
   m_ObjectHideFlags: 1
@@ -1480,6 +1481,20 @@ MonoBehaviour:
   CameraPanner: {fileID: 4849870022859572}
   PanMultiplierX: 0.75
   PanMultiplierY: 1
+--- !u!114 &114439482203112738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1915082260117670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02524d4f71b917d4782d66357f91eb00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 2
+  Health: 2
+  debug_die: 0
 --- !u!114 &114949997408901764
 MonoBehaviour:
   m_ObjectHideFlags: 1
