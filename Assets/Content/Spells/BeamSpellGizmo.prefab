@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1482432201474082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 67, z: 0}
+  m_LocalPosition: {x: 0, y: 68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4753600811236122}
@@ -217,7 +217,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementDirection: {x: 1, y: 0, z: 0}
   MovementSpeed: 10
-  SphereRadius: 67
+  SphereRadius: 68
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294959359
   DamageMin: 0.1
   DamageMax: 10
   DamageIncreaseSpeedMultiplier: 0.4

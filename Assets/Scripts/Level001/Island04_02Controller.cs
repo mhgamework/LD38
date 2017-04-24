@@ -24,6 +24,7 @@ public class Island04_02Controller : MonoBehaviour
 
         while (!t.playerInTrigger("Checkpoint")) yield return null;
 
+        PlayerHealthScript.Instance.RestoreHealth();
 
         foreach (var spawner in t.Get<Spawner>("Heavy"))
         {
@@ -55,6 +56,8 @@ public class Island04_02Controller : MonoBehaviour
         yield return null;
 
         while (t.Get<TimelineEnemyDetector>("EnemyDetector").Any(f => f.HasEnemies)) yield return null;
+
+        PlayerHealthScript.Instance.RestoreHealth();
 
         //foreach (var g in t.Get<Gate>("Gate")) g.OpenGate();
 
