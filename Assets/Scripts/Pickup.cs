@@ -9,13 +9,21 @@ public class Pickup : MonoBehaviour
     private int worth = 5;
     [SerializeField]
     private AudioSource audioSource = null;
-    private bool isPickedUp;
+    public bool IsPickedUp { get; private set; }
+
+    public void ResetPickedUp()
+    {
+        IsPickedUp = false;
+        gameObject.SetActive(true);
+        GetComponent<Renderer>().enabled = true;
+        audioSource.enabled = false;
+    }
 
     void OnTriggerEnter(Collider other)
     {
-        if (isPickedUp)
+        if (IsPickedUp)
             return;
-        isPickedUp = true;
+        IsPickedUp = true;
 
         PlayerPoints.Points += worth;
 
@@ -30,6 +38,6 @@ public class Pickup : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        Destroy(this);
+        gameObject.SetActive(false);
     }
 }

@@ -26,6 +26,7 @@ namespace Assets.Scripts
             activeCheckpointReset = reset;
             ActiveCheckpoint = id;
             lastPoints = PlayerPoints.Points;
+            PickupManager.CreateRestorePoint();
         }
 
         ///// <summary>
@@ -55,6 +56,7 @@ namespace Assets.Scripts
             KillAllEnemies();
             activeCheckpointReset();
             PlayerPoints.Points = lastPoints;
+            PickupManager.Restore();
             //StartCoroutine(begin().GetEnumerator());
             //}
 
