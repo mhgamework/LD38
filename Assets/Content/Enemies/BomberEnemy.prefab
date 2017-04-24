@@ -3403,7 +3403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa41b69ed7a18ef44bbb8b62ac226c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 41.09
+  Health: 10
   OnDeathAnim: {fileID: 1110925174776316}
   OnDamageAnim: {fileID: 1213303188582820}
   healthDisplayPrefab: {fileID: 114848505908247236, guid: 0ad1a335c6c49ce45af676d74af08a51,
