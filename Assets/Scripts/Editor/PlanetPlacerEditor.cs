@@ -12,7 +12,7 @@ public class PlanetPlacerEditor : Editor
         {
             case EventType.keyDown:
                 {
-                    if (Event.current.keyCode == (KeyCode.A))
+                    if (Event.current.keyCode == (KeyCode.E))
                     {
                         Ray ray = HandleUtility.GUIPointToWorldRay(Event.current.mousePosition);
                         script.PlaceObject(ray);
