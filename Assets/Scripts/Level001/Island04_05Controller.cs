@@ -19,15 +19,17 @@ public class Island04_05Controller : MonoBehaviour
 
     public IEnumerable<YieldInstruction> begin()
     {
+        foreach (var g in t.Get<Gate>("global.Gate4")) g.CloseGate();
+
         yield return null;
 
-        while (!t.playerInTrigger("Checkpoint")) yield return null;
+        while (!t.playerInTrigger("Trigger")) yield return null;
 
         PlayerHealthScript.Instance.RestoreHealth();
 
-        foreach (var spawner in t.Get<Spawner>("Heavy"))
+        foreach (var spawner in t.Get<Spawner>("Bomber"))
         {
-            spawner.Spawn(t.Heavy);
+            spawner.Spawn(t.Bomber);
             yield return new WaitForSeconds(0.2f);
         }
         yield return new WaitForSeconds(0.5f);
@@ -36,15 +38,29 @@ public class Island04_05Controller : MonoBehaviour
             spawner.Spawn(t.Fast);
             yield return new WaitForSeconds(0.2f);
         }
-        yield return new WaitForSeconds(0.5f);
-        foreach (var spawner in t.Get<Spawner>("Bomber"))
+        yield return new WaitForSeconds(1f);
+        foreach (var spawner in t.Get<Spawner>("Heavy"))
         {
-            spawner.Spawn(t.Bomber);
+            spawner.Spawn(t.Heavy);
             yield return new WaitForSeconds(0.2f);
         }
 
-        yield return new WaitForSeconds(10f);
 
+        yield return new WaitForSeconds(5f);
+        foreach (var spawner in t.Get<Spawner>("Fast1"))
+        {
+            spawner.Spawn(t.Fast);
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        yield return new WaitForSeconds(3f);
+        foreach (var spawner in t.Get<Spawner>("Fast1"))
+        {
+            spawner.Spawn(t.Fast);
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        yield return new WaitForSeconds(3f);
         foreach (var spawner in t.Get<Spawner>("Fast1"))
         {
             spawner.Spawn(t.Fast);
@@ -58,7 +74,7 @@ public class Island04_05Controller : MonoBehaviour
 
         PlayerHealthScript.Instance.RestoreHealth();
 
-        //foreach (var g in t.Get<Gate>("Gate")) g.OpenGate();
+        foreach (var g in t.Get<Gate>("global.Gate4")) g.OpenGate();
 
         yield return null;
     }
