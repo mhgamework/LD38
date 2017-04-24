@@ -2088,10 +2088,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c154af3da319282428a29573c7b1b5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 100
+  healthDisplayPrefab: {fileID: 114848505908247236, guid: 0ad1a335c6c49ce45af676d74af08a51,
+    type: 2}
+  healthDisplaySpawnHeight: 6
   animator: {fileID: 95588174104066842}
   MovementSpeed: 5
   RotationSpeed: 90
-  Health: 100
   JumpInterval: 1.5
   StrikeRange: 4
   StrikeDamage: 3

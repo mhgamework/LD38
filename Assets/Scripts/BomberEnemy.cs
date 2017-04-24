@@ -14,8 +14,10 @@ namespace Assets.Scripts
         private Vector3 toTarget;
         private PlanetCamera planetCamera;
 
-        public void Start()
+        protected override void Start()
         {
+            base.Start();
+
             body = GetComponent<Rigidbody>();
             transform.position = transform.position.normalized * PlanetConfig.Instance.WalkSphereRadius;
             planetCamera = PlanetCamera.Instance;

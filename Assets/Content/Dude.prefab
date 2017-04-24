@@ -1685,8 +1685,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 2
-  Health: 2
   debug_die: 0
+  playerHealthDisplayPrefab: {fileID: 114848505908247236, guid: ed5beb14509eff443b14b93354b4a285,
+    type: 2}
+  playerTransform: {fileID: 4185491980053094}
 --- !u!114 &114949997408901764
 MonoBehaviour:
   m_ObjectHideFlags: 1

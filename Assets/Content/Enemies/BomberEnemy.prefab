@@ -3130,12 +3130,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa41b69ed7a18ef44bbb8b62ac226c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 41.09
+  healthDisplayPrefab: {fileID: 114848505908247236, guid: 0ad1a335c6c49ce45af676d74af08a51,
+    type: 2}
+  healthDisplaySpawnHeight: 2
   animator: {fileID: 95306986332461422}
   ProjectileTemplate: {fileID: 1678562517180982, guid: 89cc72ce654c04b4ca2256b60eed71ae,
     type: 2}
   MovementSpeed: 1
   RotationSpeed: 90
-  Health: 41.09
 --- !u!114 &114679164591184378
 MonoBehaviour:
   m_ObjectHideFlags: 1
