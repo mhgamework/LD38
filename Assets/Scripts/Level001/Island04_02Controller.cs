@@ -27,7 +27,7 @@ public class Island04_02Controller : MonoBehaviour
 
         foreach (var spawner in t.Get<Spawner>("Heavy"))
         {
-            spawner.Spawn(t.Fast);
+            spawner.Spawn(t.Heavy);
             yield return new WaitForSeconds(0.2f);
         }
         yield return new WaitForSeconds(0.5f);
@@ -39,11 +39,11 @@ public class Island04_02Controller : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         foreach (var spawner in t.Get<Spawner>("Bomber"))
         {
-            spawner.Spawn(t.Fast);
+            spawner.Spawn(t.Bomber);
             yield return new WaitForSeconds(0.2f);
         }
 
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(10f);
 
         foreach (var spawner in t.Get<Spawner>("Fast1"))
         {
