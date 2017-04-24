@@ -8,7 +8,6 @@ namespace Assets.Scripts.Level001
 {
     public class Area1Controller : MonoBehaviour
     {
-
         private bool done = false;
         private Coroutine coroutine;
         private TimelineArea t;
@@ -25,6 +24,9 @@ namespace Assets.Scripts.Level001
         public IEnumerable<YieldInstruction> begin()
         {
             yield return null;
+            foreach (var g in t.Get<Gate>("global.Gate02-1")) g.CloseGate();
+            foreach (var g in t.Get<Gate>("global.Gate02-2")) g.CloseGate();
+
             while (!t.playerInTrigger("Trigger1")) yield return new WaitForSeconds(0);
             t.Spawn("Fast1", t.Fast);
 
@@ -41,7 +43,7 @@ namespace Assets.Scripts.Level001
             yield return new WaitForSeconds(1f);
 
 
-            foreach (var g in t.Get<Gate>("Gate1")) g.OpenGate();
+            foreach (var g in t.Get<Gate>("global.Gate02-1")) g.OpenGate();
         }
 
 

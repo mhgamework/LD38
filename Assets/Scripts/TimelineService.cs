@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts.Timeline;
 using UnityEngine;
 
 namespace Assets.Scripts
@@ -48,14 +49,19 @@ namespace Assets.Scripts
             //{
             PlanetCamera.Instance.PlayerPosition = ActiveCheckpoint.Position;
             PlayerHealthScript.Instance.Health = PlayerHealthScript.Instance.MaxHealth;
-            foreach (var e in FindObjectsOfType<AEnemy>())
-                //.Concat(FindObjectsOfType<FastEnemy>().Cast<MonoBehaviour>())
-                //.Concat(FindObjectsOfType<HeavyEnemy>());
-                Destroy(e.gameObject);
+            KillAllEnemies();
             activeCheckpointReset();
             //StartCoroutine(begin().GetEnumerator());
             //}
 
+        }
+
+        private static void KillAllEnemies()
+        {
+            foreach (var e in FindObjectsOfType<AEnemy>())
+                //.Concat(FindObjectsOfType<FastEnemy>().Cast<MonoBehaviour>())
+                //.Concat(FindObjectsOfType<HeavyEnemy>());
+                Destroy(e.gameObject);
         }
 
 
@@ -63,6 +69,7 @@ namespace Assets.Scripts
         public event Action OnStart;
 
         private bool first = true;
+        public List<ITimelineEntity> TimelineGlobals { get; private set; }
 
         public void Register(ITimelineEntity entity)
         {
@@ -77,8 +84,12 @@ namespace Assets.Scripts
 
         public void Update()
         {
+            if (Input.GetKeyDown(KeyCode.KeypadMultiply))
+                KillAllEnemies();
+
             if (first)
             {
+                TimelineGlobals = FindObjectsOfType<TimelineGlobal>().SelectMany(c => c.GetComponents<ITimelineEntity>()).ToList();
                 if (OnStart != null) OnStart.Invoke();
             }
             first = false;

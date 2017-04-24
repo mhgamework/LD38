@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Timeline
 {
-    public class TimelineArea : MonoBehaviour
+    public class TimelineArea : MonoBehaviour, ITimelineEntity
     {
         public GameObject Bomber;
         public GameObject Fast;
@@ -13,13 +13,27 @@ namespace Assets.Scripts.Timeline
 
         public Transform Root;
 
+        public void Start()
+        {
+            var inst = TimelineService.Instance; // Initialize the service, bit hacky
+        }
+
         public void Spawn(string name, GameObject thing)
+        {
+            foreach (var i in SpawnAsync(name, thing, 0))
+            {
+
+            }
+        }
+        public IEnumerable<YieldInstruction> SpawnAsync(string name, GameObject thing, float interval)
         {
             foreach (var s in Get<Spawner>(name))
             {
                 s.Spawn(thing);
+                yield return new WaitForSeconds(interval);
             }
         }
+
         public void preventMovement()
         {
         }
@@ -59,7 +73,7 @@ namespace Assets.Scripts.Timeline
 
         public IEnumerable<YieldInstruction> waitForCheckpoint(string checkpoint, Action restore)
         {
-            while (!playerInTrigger(checkpoint)) yield return null;
+            while (!playerInTrigger(checkpoint) || Get<TimelineCheckpoint>(checkpoint).Any(c => !c.CheckpointActive)) yield return null;
             TimelineService.Instance.ActivateCheckpoint(Get<TimelineTrigger>(checkpoint).First(t => t.PlayerInTrigger), restore);
         }
 
@@ -75,22 +89,44 @@ namespace Assets.Scripts.Timeline
             ITimelineEntity[] ret;
             if (cache.TryGetValue(name, out ret)) return ret.OfType<T>();
 
-            ret = transform.GetComponentsInChildren<ITimelineEntity>().Where(o => ((MonoBehaviour)o).name == name).ToArray();
+
+            var oriName = name;
+
+            IEnumerable<ITimelineEntity> timelineEntities = null;
+
+            if (name.ToLower().StartsWith("global."))
+            {
+                name = name.Substring("global.".Length);
+                timelineEntities = TimelineService.Instance.TimelineGlobals.Cast<ITimelineEntity>();
+            }
+            else
+                timelineEntities = transform.GetComponentsInChildren<ITimelineEntity>();
+
+
+            ret = timelineEntities.Where(o => ((MonoBehaviour)o).name == name).ToArray();
             ret =
                 ret.Concat(
                     ret.OfType<TimelineParent>()
                         .SelectMany(t => ((MonoBehaviour)t).GetComponentsInChildren<ITimelineEntity>())).ToArray();
-            cache[name] = ret;
+            cache[oriName] = ret;
             var realRet = ret.OfType<T>().ToList();
             if (!realRet.Any())
-                Debug.LogError("Did not find any object with name " + name + " and type " + typeof(T).Name);
+                Debug.LogError("Did not find any object with name " + oriName + " and type " + typeof(T).Name);
 
             return realRet;
 
         }
 
 
-
-       
+        public void Disable(string name)
+        {
+            foreach (var o in Get<ITimelineEntity>(name).Select(t => gameObject).Distinct())
+                o.SetActive(false);
+        }
+        public void Enable(string name)
+        {
+            foreach (var o in Get<ITimelineEntity>(name).Select(t => gameObject).Distinct())
+                o.SetActive(true);
+        }
     }
 }

@@ -16,7 +16,10 @@ namespace Assets.Scripts.Level001
         public void Start()
         {
             t = GetComponent<TimelineArea>();
-            t.RunWithCheckpoint("Checkpoint", begin);
+
+            //t.Disable(name);
+            foreach (var c in t.Get<TimelineCheckpoint>("Checkpoint02-top")) c.CheckpointActive = false;
+            t.RunWithCheckpoint("Checkpoint02-top", begin);
             //coroutine = StartCoroutine(begin().GetEnumerator());
             //GetComponent<BendAroundPlanet>().GetTarget().gameObject.SetActive(false);
         }
@@ -26,21 +29,33 @@ namespace Assets.Scripts.Level001
             yield return null;
 
 
-            //foreach (var g in t.Get<Gate>("Gate")) g.OpenGate();
+            foreach (var g in t.Get<Gate>("global.Gate02-1")) g.OpenGate();
+            foreach (var g in t.Get<Gate>("global.Gate02-2")) g.CloseGate();
 
             while (!t.playerInTrigger("Trigger")) yield return null;
 
-            foreach (var spawner in t.Get<Spawner>("Fast1"))
+            foreach (var i in t.SpawnAsync("Fast3", t.Fast, 0.3f)) yield return i;
+
+
+            while (t.Get<TimelineEnemyDetector>("EnemyDetector").Any(f => f.HasEnemies)) yield return null;
+
+
+            foreach (var i in t.SpawnAsync("Fast1", t.Fast, 0.5f)) yield return i;
+
+
+            foreach (var i in t.SpawnAsync("Fast2", t.Fast, 0.5f)) yield return i;
+
+            while (t.Get<TimelineEnemyDetector>("EnemyDetector").Any(f => f.HasEnemies)) yield return null;
+
+            for (int i = 0; i < 3; i++)
             {
-                spawner.Spawn(t.Fast);
-                yield return new WaitForSeconds(0.2f);
+                foreach (var k in t.SpawnAsync("Fast1", t.Fast, 0.5f)) yield return k;
+
+                foreach (var k in t.SpawnAsync("Fast2", t.Fast, 0.5f)) yield return k;
+
             }
-            yield return new WaitForSeconds(0.5f);
 
-            t.Spawn("Fast2", t.Fast);
-            yield return new WaitForSeconds(0.5f);
 
-            t.Spawn("Fast3", t.Fast);
 
             yield return null;
 
@@ -48,6 +63,9 @@ namespace Assets.Scripts.Level001
 
             //foreach (var g in t.Get<Gate>("Gate")) g.OpenGate();
 
+
+            foreach (var g in t.Get<Gate>("global.Gate02-1")) g.OpenGate();
+            foreach (var g in t.Get<Gate>("global.Gate02-2")) g.OpenGate();
 
             yield return null;
         }

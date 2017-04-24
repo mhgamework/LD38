@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
@@ -30,5 +31,6 @@ namespace Assets.Scripts
             newObj.transform.position = getSpawnPosition();
             //newObj.transform.up = getSpawnPosition().normalized;
         }
+     
     }
 }
