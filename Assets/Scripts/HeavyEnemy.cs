@@ -19,6 +19,20 @@ namespace Assets.Scripts
         private bool airbourne = false;
         private PlanetCamera planetCamera;
 
+        public float StrikeRange = 5f;
+        public float StrikeDamage = 3f;
+        public float StrikeDistanceToStart = 2f;
+
+        public void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, StrikeRange);
+            Gizmos.color = Color.green;
+
+            Gizmos.DrawWireSphere(transform.position, StrikeDistanceToStart);
+
+        }
+
         public void Start()
         {
             planetCamera = PlanetCamera.Instance;
@@ -77,6 +91,9 @@ namespace Assets.Scripts
                 } while (animator.GetCurrentAnimatorStateInfo(0).IsTag("walk"));
                 body.velocity = new Vector3();
 
+                // Strike!
+                if ((planetCamera.PlayerPosition - transform.position).magnitude < StrikeRange)
+                    PlayerHealthScript.Instance.TakeDamage(StrikeDamage);
 
                 yield return new WaitForSeconds(JumpInterval);
 

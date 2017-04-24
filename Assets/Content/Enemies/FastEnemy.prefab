@@ -881,7 +881,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1069676459599944}
   m_LocalRotation: {x: -0.24824338, y: 0.14328808, z: -0.42311957, w: 0.8595427}
-  m_LocalPosition: {x: 43.967953, y: 34.752235, z: -36.716507}
+  m_LocalPosition: {x: 1.24, y: 44.69, z: -55.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4965752690614120}
@@ -3044,9 +3044,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a75386441907314cab6d5cbf8985d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   MovementSpeed: 5
   Health: 3
+  StrikeDamage: 1
+  StrikeDistanceToStart: 2.65
+  StrikeRange: 4.21
+  StrikeChargeDuration: 1
+  StrikeInterval: 2
 --- !u!136 &136684341612804310
 CapsuleCollider:
   m_ObjectHideFlags: 1

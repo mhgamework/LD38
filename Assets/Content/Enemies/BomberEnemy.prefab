@@ -3131,7 +3131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 95306986332461422}
-  ProjectileTemplate: {fileID: 1737105201036248, guid: ba9f3ca800b31774b8545844b27432b5,
+  ProjectileTemplate: {fileID: 1678562517180982, guid: 89cc72ce654c04b4ca2256b60eed71ae,
     type: 2}
   MovementSpeed: 1
   RotationSpeed: 90

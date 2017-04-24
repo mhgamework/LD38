@@ -26,6 +26,8 @@ namespace Assets.Scripts
 
         private Rigidbody rigidbody;
 
+        public bool IsPlayerProjectile = true;
+
         public void Start()
         {
             rigidbody = GetComponent<Rigidbody>();
@@ -51,14 +53,10 @@ namespace Assets.Scripts
         IEnumerator Explode()
         {
             var inside = Physics.OverlapSphere(transform.position, ExplosionRadius);
-            var enemies = inside.Select(f => EnemiesHelper.GetEnemyForCollider(f)).Where(item => item != null);
-            foreach (var e in enemies)
-            {
-                e.TakeDamage(ExplosionDamage);
-                ((MonoBehaviour)e).GetComponent<Rigidbody>()
-                    .AddExplosionForce(ExplosionForce, transform.position, ExplosionRadius);
-            }
-
+            if (IsPlayerProjectile)
+                dealDamageEnemies(inside);
+            else
+                dealDamagePlayer(inside);
             boulderMesh.enabled = false;
             foreach (var o in toStopOnExplode)
             {
@@ -77,6 +75,26 @@ namespace Assets.Scripts
             yield return new WaitForSeconds(5f);
 
             Destroy(gameObject);
+        }
+
+        private void dealDamagePlayer(Collider[] inside)
+        {
+            var player = inside.Select(c => c.GetComponentInParent<PlayerHealthScript>()).FirstOrDefault(f => f != null);
+            if (player == null) return;
+
+            player.TakeDamage(ExplosionDamage);
+
+        }
+
+        private void dealDamageEnemies(Collider[] inside)
+        {
+            var enemies = inside.Select(f => EnemiesHelper.GetEnemyForCollider(f)).Where(item => item != null);
+            foreach (var e in enemies)
+            {
+                e.TakeDamage(ExplosionDamage);
+                ((MonoBehaviour)e).GetComponent<Rigidbody>()
+                    .AddExplosionForce(ExplosionForce, transform.position, ExplosionRadius);
+            }
         }
     }
 }
