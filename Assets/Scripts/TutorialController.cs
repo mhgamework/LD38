@@ -15,6 +15,9 @@ public class TutorialController : MonoBehaviour
     [SerializeField]
     private GameObject gateTutorialText = null;
 
+    [SerializeField]
+    private GameObject[] toDeactivate = new GameObject[0];
+
     private bool completed = false;
 
     void Start()
@@ -42,6 +45,12 @@ public class TutorialController : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         walkTutorialText.SetActive(false);
+
+        foreach (var o in toDeactivate)
+        {
+            o.SetActive(false);
+        }
+
         this.enabled = false;
     }
 
