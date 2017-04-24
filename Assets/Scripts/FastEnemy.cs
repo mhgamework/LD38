@@ -3,12 +3,11 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class FastEnemy : MonoBehaviour, IEnemy
+    public class FastEnemy : AEnemy
     {
         private Rigidbody body;
         public float MovementSpeed = 1;
 
-        public float Health = 3;
         private PlanetCamera planetCamera;
 
         public float StrikeDamage = 1;
@@ -104,12 +103,6 @@ namespace Assets.Scripts
         private float getDistToPlayer()
         {
             return (planetCamera.PlayerPosition - transform.position).magnitude;
-        }
-
-        public void TakeDamage(float amount)
-        {
-            Health -= amount;
-            if (Health <= 0) Destroy(gameObject);
         }
     }
 }

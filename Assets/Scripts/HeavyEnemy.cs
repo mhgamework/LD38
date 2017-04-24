@@ -3,16 +3,14 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class HeavyEnemy : MonoBehaviour, IEnemy
+    public class HeavyEnemy : AEnemy
     {
         public Animator animator;
         private Rigidbody body;
         public float MovementSpeed = 1;
 
         public float RotationSpeed = 90;
-
-        public float Health = 3;
-
+        
         public float JumpInterval = 2;
 
         private Vector3 toTarget;
@@ -135,12 +133,6 @@ namespace Assets.Scripts
 
             ////transform.LookAt(body.position + lookDir, transform.position.normalized);
 
-        }
-
-        public void TakeDamage(float amount)
-        {
-            Health -= amount;
-            if (Health <= 0) Destroy(gameObject);
         }
 
         //public void Fire()
