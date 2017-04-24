@@ -21,6 +21,8 @@ namespace Assets.Scripts
         public float StrikeDamage = 3f;
         public float StrikeDistanceToStart = 2f;
 
+        public GameObject LandEffect;
+
         public void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.red;
@@ -88,7 +90,8 @@ namespace Assets.Scripts
 
                 } while (animator.GetCurrentAnimatorStateInfo(0).IsTag("walk"));
                 body.velocity = new Vector3();
-
+                var eff = Instantiate(LandEffect, transform);
+                eff.gameObject.SetActive(true);
                 // Strike!
                 if ((planetCamera.PlayerPosition - transform.position).magnitude < StrikeRange)
                     PlayerHealthScript.Instance.TakeDamage(StrikeDamage);

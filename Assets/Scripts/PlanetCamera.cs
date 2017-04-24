@@ -39,6 +39,8 @@ public class PlanetCamera : Singleton<PlanetCamera>
         set { RigidBody.position = value.normalized * radius; }
     }
 
+    public Transform PlayerTransform { get { return WizardModel.transform; } }
+
     // Use this for initialization
     void Start()
     {
