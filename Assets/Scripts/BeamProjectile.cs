@@ -12,6 +12,9 @@ namespace Assets.Scripts
         public float SphereRadius = 67;
         private Rigidbody rigidbody;
 
+        [SerializeField]
+        private LayerMask layerMask;
+
         public float DamageMin = 0.1f;
         public float DamageMax = 10f;
         public float DamageIncreaseSpeedMultiplier = 0.1f;
@@ -67,7 +70,7 @@ namespace Assets.Scripts
 
         //}
 
-        public bool PlanetRaycast(Vector3 point, Vector3 dir, float planetRadius, float step, out RaycastHit hitInfo, List<Vector3> out_segment_points)
+        public bool PlanetRaycast(Vector3 point, Vector3 dir, float planetRadius, float step, out RaycastHit hitInfo, List<Vector3> out_segment_points, float max_dist = 20f)
         {
 #if UNITY_EDITOR
             Profiler.BeginSample("Planet Raycast");
@@ -75,14 +78,14 @@ namespace Assets.Scripts
             out_segment_points.Clear();
             out_segment_points.Add(point);
             var totalDist = 0f;
-            while (totalDist < 1.1 * 2 * Mathf.PI * planetRadius)
+            while (totalDist < max_dist)
             {
                 var start = point;
                 var end = (point + dir * step).normalized * SphereRadius;
 
                 var ray = new Ray(start, (end - start).normalized);
 
-                if (Physics.Raycast(ray, out hitInfo, (end - start).magnitude + 0.001f))
+                if (Physics.Raycast(ray, out hitInfo, (end - start).magnitude + 0.001f, layerMask))
                 {
                     //Debug.DrawLine(hitInfo.point, hitInfo.point + hitInfo.point.normalized, Color.yellow, 3);
                     out_segment_points.Add(hitInfo.point);
@@ -147,7 +150,7 @@ namespace Assets.Scripts
             {
                 if (i > bolts.Count - 1)
                 {
-                    var o = Instantiate(lightningPrefab.gameObject,transform);
+                    var o = Instantiate(lightningPrefab.gameObject, transform);
                     o.SetActive(true);
                     var o_bolt = o.GetComponent<LightningBoltScript>();
                     o_bolt.ChaosFactor = Random.value * 0.25f + 0.1f;

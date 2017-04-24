@@ -69,4 +69,9 @@ public class PlayerHealthScript : Singleton<PlayerHealthScript>
     {
         TimelineService.Instance.RestoreCheckpoint();
     }
+
+    public void RestoreHealth()
+    {
+        Health = MaxHealth;
+    }
 }
