@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4128091564510736}
   - component: {fileID: 33177135177884404}
   - component: {fileID: 23171111207295520}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Eye01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4235395569017108}
   - component: {fileID: 33769999356564870}
   - component: {fileID: 23555856600446344}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EyeBrow02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4867155751629246}
   - component: {fileID: 33730224314476042}
   - component: {fileID: 23819823140636492}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arm02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4756590172687922}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Character Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4730290421453978}
   - component: {fileID: 33681686591479830}
   - component: {fileID: 23334515568496380}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Foot01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4878354433537912}
   - component: {fileID: 33206177043502788}
   - component: {fileID: 23414270499447086}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 4849870022859572}
   - component: {fileID: 20752648126616298}
   - component: {fileID: 114949997408901764}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 33914489647487330}
   - component: {fileID: 23350881230627636}
   - component: {fileID: 95213023160963794}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 4344372579566792}
   - component: {fileID: 33238016915906776}
   - component: {fileID: 23903050877339316}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4088174319798290}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CameraContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 4100950638532906}
   - component: {fileID: 33130241959427242}
   - component: {fileID: 23599883617091936}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hand02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 4786122543909554}
   - component: {fileID: 33964571010484978}
   - component: {fileID: 23287812309676122}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4987319341036264}
   - component: {fileID: 82741393831541168}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WalkingSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 54407436998596074}
   - component: {fileID: 81837804978476346}
   - component: {fileID: 82286221302511260}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 4598642823373262}
   - component: {fileID: 33366455082164400}
   - component: {fileID: 23962759353121712}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Eye02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 4120523843460304}
   - component: {fileID: 33423898723442988}
   - component: {fileID: 23086332576124256}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arm01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 4981776043608790}
   - component: {fileID: 33852039738330034}
   - component: {fileID: 23866798532190842}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hand01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 4900371886943530}
   - component: {fileID: 33061533762136564}
   - component: {fileID: 23987252884915598}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Foot02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4727132063181104}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 4392674872330878}
   - component: {fileID: 33461483223611452}
   - component: {fileID: 23184352279779020}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 4759510595687718}
   - component: {fileID: 33222077369664530}
   - component: {fileID: 23944611145806726}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EyeBrow01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4520978238925874}
   - component: {fileID: 108509858198314972}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 114368533000074294}
   - component: {fileID: 114073461802791374}
   - component: {fileID: 114439482203112738}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Dude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1685,7 +1685,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 2
+  OnDamageAnim: {fileID: 0}
   debug_die: 0
+  debug_damage: 0
   playerHealthDisplayPrefab: {fileID: 114848505908247236, guid: ed5beb14509eff443b14b93354b4a285,
     type: 2}
   playerTransform: {fileID: 4185491980053094}
