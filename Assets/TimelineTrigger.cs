@@ -6,7 +6,7 @@ using UnityEngine;
 public class TimelineTrigger : MonoBehaviour, ITimelineEntity
 {
     private TimelineTrigger parent = null;
-
+    public Vector3 Position { get { return getSpawnPosition(); } }
     public bool PlayerInTrigger = false;
     // Use this for initialization
     void Start()

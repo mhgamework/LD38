@@ -4,33 +4,37 @@ using UnityEngine;
 
 namespace Assets.Scripts.Level001
 {
-    public class Area1Controller : MonoBehaviour
+    public class Area1Controller : Singleton<Area1Controller>
     {
         public GameObject Bomber;
         public GameObject Fast;
         public Transform Root;
 
+        private bool done = false;
+        private Coroutine coroutine;
+
         public void Start()
         {
-            StartCoroutine(begin().GetEnumerator());
+            coroutine = StartCoroutine(begin().GetEnumerator());
             GetComponent<BendAroundPlanet>().GetTarget().gameObject.SetActive(false);
-
         }
 
         public IEnumerable<YieldInstruction> begin()
         {
+            yield return null;
+
+            while (!playerInTrigger("Checkpoint")) yield return new WaitForSeconds(0);
+            Debug.Log("Checkpoint!");
             while (!playerInTrigger("Trigger1")) yield return new WaitForSeconds(0);
             Spawn("Fast1", Fast);
 
             while (!playerInTrigger("Trigger2")) yield return new WaitForSeconds(0);
 
-            preventMovement();
 
             Spawn("Bomber2", Bomber);
             yield return new WaitForSeconds(1f);
             Spawn("Fast2", Fast);
 
-            //resumeMovement();
 
             while (Get<TimelineEnemyDetector>("EnemyDetector").Any(e => e.HasEnemies)) yield return null;
 
@@ -39,6 +43,27 @@ namespace Assets.Scripts.Level001
 
             foreach (var g in Get<Gate>("Gate2")) g.OpenGate();
             yield return null;
+            done = true;
+            Debug.Log("Done");
+        }
+
+        public void RestoreCheckpoint()
+        {
+            StopCoroutine(coroutine);
+            if (!done)
+            {
+                PlanetCamera.Instance.PlayerPosition = Get<TimelineTrigger>("Checkpoint").First().Position;
+                PlayerHealthScript.Instance.Health = PlayerHealthScript.Instance.MaxHealth;
+                foreach (
+                    var e in
+                    FindObjectsOfType<BomberEnemy>()
+                        .Cast<MonoBehaviour>()
+                        .Concat(FindObjectsOfType<FastEnemy>().Cast<MonoBehaviour>()))
+                    Destroy(e.gameObject);
+
+                StartCoroutine(begin().GetEnumerator());
+            }
+                
         }
 
 
@@ -60,6 +85,7 @@ namespace Assets.Scripts.Level001
         }
 
         private Dictionary<string, ITimelineEntity[]> cache = new Dictionary<string, ITimelineEntity[]>();
+
         private IEnumerable<T> Get<T>(string name)
         {
             ITimelineEntity[] ret;

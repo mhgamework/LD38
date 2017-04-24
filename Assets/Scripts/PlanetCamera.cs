@@ -30,7 +30,11 @@ public class PlanetCamera : Singleton<PlanetCamera>
     public float PanMultiplierY = 0.5f;
 
     public Vector3 PlayerLookDirection { get { return WizardModel.forward; } }
-    public Vector3 PlayerPosition { get { return WizardModel.transform.position; } }
+    public Vector3 PlayerPosition
+    {
+        get { return WizardModel.transform.position; }
+        set { RigidBody.position = value.normalized * radius; }
+    }
 
     // Use this for initialization
     void Start()
