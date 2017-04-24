@@ -26,6 +26,7 @@ namespace Assets.Scripts.Level001
 
         public IEnumerable<YieldInstruction> begin()
         {
+            PlayerHealthScript.Instance.RestoreHealth();
             yield return null;
 
 
@@ -68,6 +69,7 @@ namespace Assets.Scripts.Level001
             foreach (var g in t.Get<Gate>("global.Gate02-2")) g.OpenGate();
 
             yield return null;
+            PlayerHealthScript.Instance.RestoreHealth();
         }
     }
 }

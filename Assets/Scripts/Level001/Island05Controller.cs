@@ -31,7 +31,7 @@ namespace Assets.Scripts.Level001
             PlayerHealthScript.Instance.RestoreHealth();
 
             foreach (var g in t.Get<Gate>("global.Gate05")) g.CloseGate();
-            t.Disable("PreciousPickupCenter");
+            t.Disable("global.PreciousPickupCenter");
             while (!t.playerInTrigger("Trigger")) yield return null;
 
             for (int i = 0; i < 3; i++)
@@ -67,7 +67,7 @@ namespace Assets.Scripts.Level001
 
             yield return new WaitForSeconds(0.5f);
 
-            t.Enable("PreciousPickupCenter");
+            t.Enable("global.PreciousPickupCenter");
 
             while (!t.playerInTrigger("TriggerCenter")) yield return null;
             yield return new WaitForSeconds(0.5f);

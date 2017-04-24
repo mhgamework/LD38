@@ -39,6 +39,7 @@ namespace Assets.Scripts.Level001
 
             while (t.Get<TimelineEnemyDetector>("EnemyDetector").Any(f => f.HasEnemies)) yield return null;
             foreach (var g in t.Get<Gate>("global.Gate03")) g.OpenGate();
+            yield return new WaitForSeconds(1);
 
             t.Spawn("Bomber", t.Bomber);
             yield return null;
