@@ -17,6 +17,11 @@ public class AEnemy : MonoBehaviour, IEnemy
     [SerializeField]
     private int bounty = 10;
 
+    [SerializeField]
+    private float fireDamageMultiplier = 1f;
+    [SerializeField]
+    private float iceDamageMultiplier = 1f;
+
     private HealthDisplay healthDisplay;
 
     protected virtual void Start()
@@ -28,6 +33,11 @@ public class AEnemy : MonoBehaviour, IEnemy
 
     public virtual void TakeDamage(float amount, eDamageType type)
     {
+        if (type == eDamageType.FIRE)
+            amount *= fireDamageMultiplier;
+        if (type == eDamageType.ICE)
+            amount *= iceDamageMultiplier;
+
         Health -= amount;
 
         healthDisplay.ApplyDamage(amount);

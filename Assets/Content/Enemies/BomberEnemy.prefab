@@ -3501,6 +3501,9 @@ MonoBehaviour:
     type: 2}
   healthDisplaySpawnHeight: 2
   healthDisplayHealthUnitWidth: 100
+  bounty: 10
+  fireDamageMultiplier: 3
+  iceDamageMultiplier: 1
   animator: {fileID: 95306986332461422}
   ProjectileTemplate: {fileID: 1678562517180982, guid: 89cc72ce654c04b4ca2256b60eed71ae,
     type: 2}

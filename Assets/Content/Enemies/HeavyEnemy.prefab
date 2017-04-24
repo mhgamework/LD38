@@ -2884,6 +2884,8 @@ MonoBehaviour:
   healthDisplaySpawnHeight: 6
   healthDisplayHealthUnitWidth: 50
   bounty: 25
+  fireDamageMultiplier: 1
+  iceDamageMultiplier: 0.2
   animator: {fileID: 95588174104066842}
   MovementSpeed: 5
   RotationSpeed: 90
