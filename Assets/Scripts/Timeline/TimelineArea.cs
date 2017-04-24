@@ -120,12 +120,12 @@ namespace Assets.Scripts.Timeline
 
         public void Disable(string name)
         {
-            foreach (var o in Get<ITimelineEntity>(name).Select(t => gameObject).Distinct())
+            foreach (var o in Get<ITimelineEntity>(name).Cast<MonoBehaviour>().Select(t => t.gameObject).Distinct())
                 o.SetActive(false);
         }
         public void Enable(string name)
         {
-            foreach (var o in Get<ITimelineEntity>(name).Select(t => gameObject).Distinct())
+            foreach (var o in Get<ITimelineEntity>(name).Cast<MonoBehaviour>().Select(t => t.gameObject).Distinct())
                 o.SetActive(true);
         }
     }
