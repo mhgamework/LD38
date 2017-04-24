@@ -1276,15 +1276,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 3
+  OnDeathAnim: {fileID: 0}
+  OnDamageAnim: {fileID: 0}
   healthDisplayPrefab: {fileID: 114848505908247236, guid: 0ad1a335c6c49ce45af676d74af08a51,
     type: 2}
   healthDisplaySpawnHeight: 3
+  healthDisplayHealthUnitWidth: 100
+  bounty: 1
   MovementSpeed: 0
   StrikeDamage: 0
   StrikeDistanceToStart: 0
   StrikeRange: 0
   StrikeChargeDuration: 0
   StrikeInterval: 0
+  OnKilled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Assets.Scripts.DummyEnemy+KilledEventHandler, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   damageWeakness: 1
 --- !u!136 &136684341612804310
 CapsuleCollider:

@@ -3415,6 +3415,7 @@ MonoBehaviour:
     type: 2}
   healthDisplaySpawnHeight: 3
   healthDisplayHealthUnitWidth: 100
+  bounty: 5
   MovementSpeed: 5
   StrikeDamage: 1
   StrikeDistanceToStart: 2.65

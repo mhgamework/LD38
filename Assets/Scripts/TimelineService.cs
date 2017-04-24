@@ -15,6 +15,8 @@ namespace Assets.Scripts
         public TimelineTrigger ActiveCheckpoint { get; private set; }
         private Action activeCheckpointReset;
 
+        private int lastPoints = 0;
+
         public void ActivateCheckpoint(TimelineTrigger id, Action reset)
         {
             //if (ActiveCheckpoint == id)
@@ -23,6 +25,7 @@ namespace Assets.Scripts
             //}
             activeCheckpointReset = reset;
             ActiveCheckpoint = id;
+            lastPoints = PlayerPoints.Points;
         }
 
         ///// <summary>
@@ -51,6 +54,7 @@ namespace Assets.Scripts
             PlayerHealthScript.Instance.Health = PlayerHealthScript.Instance.MaxHealth;
             KillAllEnemies();
             activeCheckpointReset();
+            PlayerPoints.Points = lastPoints;
             //StartCoroutine(begin().GetEnumerator());
             //}
 

@@ -14,6 +14,9 @@ public class AEnemy : MonoBehaviour, IEnemy
     [SerializeField]
     private int healthDisplayHealthUnitWidth = 100;
 
+    [SerializeField]
+    private int bounty = 10;
+
     private HealthDisplay healthDisplay;
 
     protected virtual void Start()
@@ -41,6 +44,8 @@ public class AEnemy : MonoBehaviour, IEnemy
                 inst.transform.position = transform.position;
                 inst.transform.up = OnDeathAnim.transform.position.normalized;
             }
+
+            PlayerPoints.Points += bounty;
         }
     }
 

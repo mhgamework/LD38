@@ -17,7 +17,9 @@ public class Pickup : MonoBehaviour
             return;
         isPickedUp = true;
 
-        Debug.Log(string.Format("You earned {0} points!!", worth));
+        PlayerPoints.Points += worth;
+
+        //Debug.Log(string.Format("You earned {0} points!!", worth));
         StartCoroutine(OnPickup());
     }
 
