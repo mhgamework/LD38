@@ -745,7 +745,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1915082260117670}
-  m_LocalRotation: {x: 0.12765229, y: 0.8306091, z: -0.42417023, w: -0.33745095}
+  m_LocalRotation: {x: 0.32651398, y: 0.4745734, z: -0.27045825, w: -0.77137613}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -754,7 +754,7 @@ Transform:
   - {fileID: 4657997094505628}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 38.206, y: -121.657005, z: -320.641}
+  m_LocalEulerAnglesHint: {x: -14.302001, y: -69.69, z: -311.374}
 --- !u!4 &4981776043608790
 Transform:
   m_ObjectHideFlags: 1
@@ -1692,7 +1692,7 @@ MonoBehaviour:
   GrenadeSpellChargeRate: 2
   GrenadeSpellChargeMin: 1
   GrenadeSpellChargeMax: 3
-  GrenadeSpellCooldown: 6
+  GrenadeSpellCooldown: 2
   FastSpell: {fileID: 1619904165486318, guid: 567e60837b2392d40a341852ce59081d, type: 2}
   BeamSpell: {fileID: 1176674357612666, guid: 8605ae4122132b243b5e17ddac422e61, type: 2}
   GrenadeSpell: {fileID: 1737105201036248, guid: ba9f3ca800b31774b8545844b27432b5,
