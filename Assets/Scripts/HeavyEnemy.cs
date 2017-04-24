@@ -105,7 +105,12 @@ namespace Assets.Scripts
 
         public void Update()
         {
-            transform.LookAt(transform.position + transform.forward, transform.position.normalized);
+
+            var right = Vector3.Cross(transform.position.normalized, transform.forward.normalized).normalized;
+
+            var forward = Vector3.Cross(right, transform.position.normalized).normalized;
+
+            transform.LookAt(transform.position + forward, transform.position.normalized);
             //Debug.DrawRay(transform.position, lookDir, Color.blue);
             ////Debug.DrawLine(transform.position, transform.position + body.velocity,Color.green);
 

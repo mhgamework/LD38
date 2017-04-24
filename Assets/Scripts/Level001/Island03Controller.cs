@@ -27,6 +27,7 @@ namespace Assets.Scripts.Level001
 
         public IEnumerable<YieldInstruction> begin()
         {
+            PlayerHealthScript.Instance.RestoreHealth();
             yield return null;
             foreach (var g in t.Get<Gate>("global.Gate03")) g.OpenGate();
 
@@ -34,19 +35,24 @@ namespace Assets.Scripts.Level001
             foreach (var g in t.Get<Gate>("global.Gate03")) g.CloseGate();
             t.Spawn("Heavy", t.Heavy);
             t.Spawn("Fast", t.Fast);
+            yield return null;
+
+            while (t.Get<TimelineEnemyDetector>("EnemyDetector").Any(f => f.HasEnemies)) yield return null;
+            foreach (var g in t.Get<Gate>("global.Gate03")) g.OpenGate();
+
             t.Spawn("Bomber", t.Bomber);
             yield return null;
 
             while (t.Get<TimelineEnemyDetector>("EnemyDetector").Any(f => f.HasEnemies)) yield return null;
 
-            foreach (var g in t.Get<Gate>("global.Gate03")) g.OpenGate();
-            foreach (var g in t.Get<Gate>("global.Gate02-1")) g.OpenGate();
+
             foreach (var g in t.Get<Gate>("global.Gate02-1")) g.OpenGate();
 
             foreach (var c in t.Get<TimelineCheckpoint>("global.Checkpoint02-top")) c.CheckpointActive = true;
 
 
             yield return null;
+            PlayerHealthScript.Instance.RestoreHealth();
         }
     }
 }

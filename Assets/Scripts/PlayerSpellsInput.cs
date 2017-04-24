@@ -10,6 +10,10 @@ namespace Assets.Scripts
         public float GrenadeSpellChargeMin = 5f;
         public float GrenadeSpellChargeMax = 20f;
 
+        public float GrenadeSpellCooldown = 6;
+
+        private float lastGrenade = -1000;
+
         public GameObject FastSpell;
         public GameObject BeamSpell;
         public GameObject GrenadeSpell;
@@ -66,8 +70,10 @@ namespace Assets.Scripts
 
 
                 }
-                if (Input.GetMouseButton(2))
+                if (Input.GetMouseButton(2) && lastGrenade + GrenadeSpellCooldown < Time.time)
                 {
+                    lastGrenade = Time.time;
+
                     // Charge grenade
 
                     var charge = GrenadeSpellChargeMin;
@@ -80,7 +86,6 @@ namespace Assets.Scripts
                         yield return new WaitForSeconds(0);
 
                     }
-
                     var inst = Instantiate(GrenadeSpell);
                     inst.gameObject.SetActive(true);
                     var proj = inst.GetComponentInChildren<GrenadeProjectile>();

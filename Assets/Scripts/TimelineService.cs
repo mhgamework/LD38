@@ -87,6 +87,12 @@ namespace Assets.Scripts
             if (Input.GetKeyDown(KeyCode.KeypadMultiply))
                 KillAllEnemies();
 
+            if (Input.GetKeyDown(KeyCode.KeypadPlus))
+                PlanetCamera.Instance.MovementSpeed *= 2;
+            if (Input.GetKeyDown(KeyCode.KeypadMinus))
+                PlanetCamera.Instance.MovementSpeed *= 0.5f;
+
+
             if (first)
             {
                 TimelineGlobals = FindObjectsOfType<TimelineGlobal>().SelectMany(c => c.GetComponents<ITimelineEntity>()).ToList();

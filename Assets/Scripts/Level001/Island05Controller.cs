@@ -28,6 +28,8 @@ namespace Assets.Scripts.Level001
         public IEnumerable<YieldInstruction> begin()
         {
             yield return null;
+            PlayerHealthScript.Instance.RestoreHealth();
+
             foreach (var g in t.Get<Gate>("global.Gate05")) g.CloseGate();
             t.Disable("PreciousPickupCenter");
             while (!t.playerInTrigger("Trigger")) yield return null;
@@ -75,6 +77,8 @@ namespace Assets.Scripts.Level001
             while (t.Get<TimelineEnemyDetector>("EnemyDetector").Any(f => f.HasEnemies)) yield return null;
 
             foreach (var g in t.Get<Gate>("global.Gate05")) g.OpenGate();
+
+            PlayerHealthScript.Instance.RestoreHealth();
 
             yield return null;
         }
