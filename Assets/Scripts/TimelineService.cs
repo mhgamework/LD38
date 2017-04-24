@@ -17,6 +17,8 @@ namespace Assets.Scripts
 
         private int lastPoints = 0;
 
+        public bool enableRestore = true;
+
         public void ActivateCheckpoint(TimelineTrigger id, Action reset)
         {
             //if (ActiveCheckpoint == id)
@@ -42,6 +44,8 @@ namespace Assets.Scripts
 
         public void RestoreCheckpoint()
         {
+            
+
             if (ActiveCheckpoint == null)
             {
                 // Not in checkpoint !!
@@ -55,6 +59,10 @@ namespace Assets.Scripts
             PlayerHealthScript.Instance.Health = PlayerHealthScript.Instance.MaxHealth;
             KillAllEnemies();
             activeCheckpointReset();
+
+            if (!enableRestore)
+                return;
+
             PlayerPoints.Points = lastPoints;
             PickupManager.Restore();
             //StartCoroutine(begin().GetEnumerator());

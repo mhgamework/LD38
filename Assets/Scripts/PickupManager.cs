@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickupManager : MonoBehaviour
 {
-    private static Pickup[] allPickups;
+    private static Pickup[] allPickups = new Pickup[0];
     private static List<Pickup> restorePoint = new List<Pickup>();
 
 
