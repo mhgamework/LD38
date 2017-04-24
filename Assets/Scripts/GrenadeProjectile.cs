@@ -57,6 +57,9 @@ namespace Assets.Scripts
                 dealDamageEnemies(inside);
             else
                 dealDamagePlayer(inside);
+
+            ExplosionDamage = 0f;
+
             boulderMesh.enabled = false;
             foreach (var o in toStopOnExplode)
             {

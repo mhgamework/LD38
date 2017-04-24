@@ -6,6 +6,8 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     [SerializeField]
+    private int worth = 5;
+    [SerializeField]
     private AudioSource audioSource = null;
     private bool isPickedUp;
 
@@ -15,7 +17,7 @@ public class Pickup : MonoBehaviour
             return;
         isPickedUp = true;
 
-        Debug.Log("You earned 5 points!!");
+        Debug.Log(string.Format("You earned {0} points!!", worth));
         StartCoroutine(OnPickup());
     }
 

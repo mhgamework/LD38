@@ -2768,7 +2768,7 @@ MonoBehaviour:
   RotationSpeed: 90
   JumpInterval: 1.5
   StrikeRange: 4
-  StrikeDamage: 3
+  StrikeDamage: 10
   StrikeDistanceToStart: 2.82
   LandEffect: {fileID: 1576722984211026}
 --- !u!198 &198037649600469076
