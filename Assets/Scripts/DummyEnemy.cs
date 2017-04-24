@@ -2,12 +2,8 @@
 
 namespace Assets.Scripts
 {
-    public class DummyEnemy : MonoBehaviour, IEnemy
+    public class DummyEnemy : AEnemy
     {
-        public void TakeDamage(float amount)
-        {
-            Debug.Log("AUCH! " + amount);
-        }
 
     }
 }

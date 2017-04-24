@@ -2,7 +2,7 @@
 
 namespace Assets.Scripts
 {
-    public class BomberEnemy : MonoBehaviour, IEnemy
+    public class BomberEnemy : AEnemy
     {
         public Animator animator;
         private Rigidbody body;
@@ -10,9 +10,6 @@ namespace Assets.Scripts
         public float MovementSpeed = 1;
 
         public float RotationSpeed = 90;
-
-        public float Health = 3;
-
         private Vector3 lookDir;
         private Vector3 toTarget;
         private PlanetCamera planetCamera;
@@ -62,12 +59,7 @@ namespace Assets.Scripts
 
         }
 
-        public void TakeDamage(float amount)
-        {
-            Health -= amount;
-            if (Health <= 0) Destroy(gameObject);
-        }
-
+        
         public void Fire()
         {
             var t = Instantiate(ProjectileTemplate);

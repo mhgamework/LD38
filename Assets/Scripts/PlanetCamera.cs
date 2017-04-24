@@ -19,6 +19,9 @@ public class PlanetCamera : Singleton<PlanetCamera>
     [SerializeField]
     private PlanetCameraDirectorManager directorManager = null;
 
+    [SerializeField]
+    private AudioSource footstepAudio = null;
+
     private Vector3 currentCameraDirection;
 
     public Transform WizardModel;
@@ -63,12 +66,12 @@ public class PlanetCamera : Singleton<PlanetCamera>
             WizardModel.LookAt(mouseTargetWorldPos, WizardModel.transform.position.normalized);
         }
 
-        var rel = Camera.main.ScreenToViewportPoint(Input.mousePosition) *2 - Vector3.one;
+        var rel = Camera.main.ScreenToViewportPoint(Input.mousePosition) * 2 - Vector3.one;
         //Debug.Log(rel);
         rel = new Vector3(Mathf.Clamp(rel.x, -1, 1), Mathf.Clamp(rel.y, -1, 1), rel.z);
         rel = Vector3.Scale(rel, new Vector3(PanMultiplierX, PanMultiplierY, 1));
 
-        CameraPanner.localPosition = new Vector3( rel.x, rel.y, 0);
+        CameraPanner.localPosition = new Vector3(rel.x, rel.y, 0);
 
 
 
@@ -99,7 +102,11 @@ public class PlanetCamera : Singleton<PlanetCamera>
         RigidBody.velocity = (right * dir.x + forward * dir.y) * MovementSpeed;
         RigidBody.angularVelocity = new Vector3();
 
-        animator.SetFloat(walkBlendParamName, Mathf.Clamp01(RigidBody.velocity.magnitude / MovementSpeed));
+        var walk_blend = Mathf.Clamp01(RigidBody.velocity.magnitude / MovementSpeed);
+        animator.SetFloat(walkBlendParamName, walk_blend);
+
+        if (footstepAudio)
+            footstepAudio.enabled = walk_blend > 0;
 
         RigidBody.transform.LookAt(RigidBody.position + forward, RigidBody.position.normalized);
         //Dude.transform.Rotate(new Vector3(1, 0, 0), dir.y * Time.deltaTime* MovementSpeed,Space.Self);
