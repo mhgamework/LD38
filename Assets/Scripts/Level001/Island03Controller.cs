@@ -28,10 +28,10 @@ namespace Assets.Scripts.Level001
         public IEnumerable<YieldInstruction> begin()
         {
             yield return null;
-            foreach (var g in t.Get<Gate>("Gate")) g.OpenGate();
+            foreach (var g in t.Get<Gate>("global.Gate03")) g.OpenGate();
 
             while (!t.playerInTrigger("Trigger")) yield return null;
-            foreach (var g in t.Get<Gate>("Gate")) g.CloseGate();
+            foreach (var g in t.Get<Gate>("global.Gate03")) g.CloseGate();
             t.Spawn("Heavy", t.Heavy);
             t.Spawn("Fast", t.Fast);
             t.Spawn("Bomber", t.Bomber);
@@ -39,7 +39,7 @@ namespace Assets.Scripts.Level001
 
             while (t.Get<TimelineEnemyDetector>("EnemyDetector").Any(f => f.HasEnemies)) yield return null;
 
-            foreach (var g in t.Get<Gate>("Gate")) g.OpenGate();
+            foreach (var g in t.Get<Gate>("global.Gate03")) g.OpenGate();
             foreach (var g in t.Get<Gate>("global.Gate02-1")) g.OpenGate();
             foreach (var g in t.Get<Gate>("global.Gate02-1")) g.OpenGate();
 
