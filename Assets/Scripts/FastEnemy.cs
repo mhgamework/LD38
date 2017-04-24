@@ -38,12 +38,13 @@ namespace Assets.Scripts
             Debug.DrawLine(transform.position, transform.position + right, Color.red);
             Debug.DrawLine(transform.position, transform.position + toTarget, Color.blue);
 
-            transform.LookAt(body.position + body.velocity, transform.position.normalized);
+            transform.LookAt(body.position + toTarget, transform.position.normalized);
 
         }
 
         public IEnumerable<YieldInstruction> begin()
         {
+            yield return new WaitForSeconds(0.5f);
             for (;;)
             {
                 //Debug.Log("Walking");
