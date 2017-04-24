@@ -17,8 +17,10 @@ namespace Assets.Scripts
         public float StrikeInterval = 2;
         private Vector3 toTarget;
 
-        public void Start()
+        protected override void Start()
         {
+            base.Start();
+
             body = GetComponent<Rigidbody>();
             transform.position = transform.position.normalized * PlanetConfig.Instance.WalkSphereRadius;
             planetCamera = PlanetCamera.Instance;

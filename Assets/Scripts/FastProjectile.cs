@@ -33,7 +33,7 @@ namespace Assets.Scripts
 
             var enemy = EnemiesHelper.GetEnemyForCollider(collision.collider);
             if (enemy == null) return;
-            enemy.TakeDamage(DamageOnHit);
+            enemy.TakeDamage(DamageOnHit, eDamageType.ICE);
         }
     }
 }

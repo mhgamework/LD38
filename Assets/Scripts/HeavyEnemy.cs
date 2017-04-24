@@ -33,8 +33,10 @@ namespace Assets.Scripts
 
         }
 
-        public void Start()
+        protected override void Start()
         {
+            base.Start();
+
             planetCamera = PlanetCamera.Instance;
             body = GetComponent<Rigidbody>();
             transform.position = transform.position.normalized * PlanetConfig.Instance.WalkSphereRadius;

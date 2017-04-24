@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4593545475398540}
   - component: {fileID: 198818932413371618}
   - component: {fileID: 199921657769778952}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particles SmokeFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4729274140261554}
   - component: {fileID: 198215346343300456}
   - component: {fileID: 199117955948645486}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rocks (fiery)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4578314673940440}
   - component: {fileID: 198350394450585214}
   - component: {fileID: 199411046930604706}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particles RockFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4778784403653386}
   - component: {fileID: 198653296794835092}
   - component: {fileID: 199787012512741150}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particles RockFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4353513689245832}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ExplosionParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 54867137999687432}
   - component: {fileID: 114217117151585938}
   - component: {fileID: 114992937182534844}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Grenade Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 82855066208695734}
   - component: {fileID: 170717973544842282}
   - component: {fileID: 164923168671738616}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sound Flying
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 23731719863156586}
   - component: {fileID: 135026176722805250}
   - component: {fileID: 114640961813408328}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4911675374691184}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GrenadeProjectileGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 4097650596033860}
   - component: {fileID: 82501326532416060}
   - component: {fileID: 164095400185804636}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sound Impact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 4261754724053518}
   - component: {fileID: 198388821838627416}
   - component: {fileID: 199984417552629496}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particles Sintels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 4117447139299976}
   - component: {fileID: 198984388679244078}
   - component: {fileID: 199249428330093056}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particles Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 4702742553365002}
   - component: {fileID: 198963418743038740}
   - component: {fileID: 199523476637837376}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}

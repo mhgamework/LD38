@@ -7,10 +7,26 @@ public class AEnemy : MonoBehaviour, IEnemy
     public GameObject OnDeathAnim;
     public GameObject OnDamageAnim;
 
+    [SerializeField]
+    private HealthDisplay healthDisplayPrefab = null;
+    [SerializeField]
+    private float healthDisplaySpawnHeight = 3f;
+    [SerializeField]
+    private int healthDisplayHealthUnitWidth = 100;
 
-    public void TakeDamage(float amount)
+    private HealthDisplay healthDisplay;
+
+    protected virtual void Start()
+    {
+        healthDisplay = Instantiate(healthDisplayPrefab);
+        healthDisplay.Initialize(Health, transform, healthDisplaySpawnHeight, healthDisplayHealthUnitWidth);
+    }
+
+
+    public virtual void TakeDamage(float amount, eDamageType type)
     {
         Health -= amount;
+        
 
         DoOnDamageAnim(OnDamageAnim, transform);
 

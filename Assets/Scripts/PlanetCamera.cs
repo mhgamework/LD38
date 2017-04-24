@@ -9,6 +9,8 @@ public class PlanetCamera : Singleton<PlanetCamera>
     public GameObject Dude;
     public float MovementSpeed = 1;
 
+    public static bool EnableMovement = true;
+
     [SerializeField]
     private float radius = 10.3f;
 
@@ -117,6 +119,9 @@ public class PlanetCamera : Singleton<PlanetCamera>
 
     private static Vector2 GetMovementDirFromUserInput()
     {
+        if (!EnableMovement)
+            return Vector2.zero;
+
         var dir = new Vector2();
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow))
             dir += new Vector2(0, 1);
