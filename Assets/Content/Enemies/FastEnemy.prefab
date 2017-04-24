@@ -3320,6 +3320,10 @@ MonoBehaviour:
   Health: 3
   OnDeathAnim: {fileID: 1983516113562454}
   OnDamageAnim: {fileID: 1960137159627192}
+  healthDisplayPrefab: {fileID: 114848505908247236, guid: ed5beb14509eff443b14b93354b4a285,
+    type: 2}
+  healthDisplaySpawnHeight: 3
+  healthDisplayHealthUnitWidth: 100
   MovementSpeed: 5
   StrikeDamage: 1
   StrikeDistanceToStart: 2.65

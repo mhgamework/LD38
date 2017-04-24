@@ -3406,6 +3406,10 @@ MonoBehaviour:
   Health: 41.09
   OnDeathAnim: {fileID: 1110925174776316}
   OnDamageAnim: {fileID: 1213303188582820}
+  healthDisplayPrefab: {fileID: 114848505908247236, guid: 0ad1a335c6c49ce45af676d74af08a51,
+    type: 2}
+  healthDisplaySpawnHeight: 2
+  healthDisplayHealthUnitWidth: 100
   animator: {fileID: 95306986332461422}
   ProjectileTemplate: {fileID: 1678562517180982, guid: 89cc72ce654c04b4ca2256b60eed71ae,
     type: 2}

@@ -26,17 +26,21 @@ public class AEnemy : MonoBehaviour, IEnemy
     public virtual void TakeDamage(float amount, eDamageType type)
     {
         Health -= amount;
-        
+
+        healthDisplay.ApplyDamage(amount);
 
         DoOnDamageAnim(OnDamageAnim, transform);
 
         if (Health <= 0)
         {
             Destroy(gameObject);
-            var inst = Instantiate(OnDeathAnim);
-            inst.gameObject.SetActive(true);
-            inst.transform.position = transform.position;
-            inst.transform.up = OnDeathAnim.transform.position.normalized;
+            if (OnDeathAnim)
+            {
+                var inst = Instantiate(OnDeathAnim);
+                inst.gameObject.SetActive(true);
+                inst.transform.position = transform.position;
+                inst.transform.up = OnDeathAnim.transform.position.normalized;
+            }
         }
     }
 
