@@ -30,6 +30,8 @@ public class Island06_Controller : MonoBehaviour
         yield return null;
 
         waveText.gameObject.SetActive(false);
+        
+        while (!t.playerInTrigger("Trigger")) yield return null;
 
         TimelineService.Instance.ActivateCheckpoint(t.Get<TimelineTrigger>("Checkpoint").First(), () =>
         {
@@ -45,8 +47,6 @@ public class Island06_Controller : MonoBehaviour
             PlayerHealthScript.Instance.RestoreHealth();
         });
 
-
-        while (!t.playerInTrigger("Trigger")) yield return null;
 
         TimelineService.Instance.enableRestore = false;
 

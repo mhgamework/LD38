@@ -13,6 +13,8 @@ namespace Assets.Scripts.Level001
         private Coroutine coroutine;
         private TimelineArea t;
 
+        private int a;
+
         public void Start()
         {
 
@@ -23,6 +25,14 @@ namespace Assets.Scripts.Level001
             //coroutine = StartCoroutine(begin().GetEnumerator());
             //GetComponent<BendAroundPlanet>().GetTarget().gameObject.SetActive(false);
 
+        }
+
+        void Update()
+        {
+            a++;
+
+            if (a == 43)
+                t.Disable("global.PreciousPickupCenter");
         }
 
         public IEnumerable<YieldInstruction> begin()

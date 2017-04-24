@@ -645,7 +645,7 @@ MonoBehaviour:
   SphereRadius: 67
   ExplosionRadius: 10
   ExplosionDamage: 5
-  ExplosionForce: 2000
+  ExplosionForce: 1000
   boulderMesh: {fileID: 23731719863156586}
   toStopOnExplode:
   - {fileID: 198984388679244078}
