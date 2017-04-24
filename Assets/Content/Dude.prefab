@@ -506,7 +506,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1629745469438604}
-  m_LocalRotation: {x: -0.005450517, y: 0.32182026, z: -0.019107059, w: 0.94659233}
+  m_LocalRotation: {x: -0.0085620275, y: -0.86780775, z: 0.01792979, w: -0.4965028}
   m_LocalPosition: {x: 2.2045794, y: 67.44671, z: -1.5270424}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -515,7 +515,7 @@ Transform:
   - {fileID: 4987319341036264}
   m_Father: {fileID: 4727132063181104}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.2710001, y: -239.55399, z: -0.16900001}
 --- !u!4 &4235395569017108
 Transform:
   m_ObjectHideFlags: 1
@@ -745,7 +745,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1915082260117670}
-  m_LocalRotation: {x: 0.57389957, y: -0.16590717, z: -0.3622446, w: 0.715467}
+  m_LocalRotation: {x: 0.12765229, y: 0.8306091, z: -0.42417023, w: -0.33745095}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -754,7 +754,7 @@ Transform:
   - {fileID: 4657997094505628}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 44.508003, y: -66.337006, z: -83.65301}
+  m_LocalEulerAnglesHint: {x: 38.206, y: -121.657005, z: -320.641}
 --- !u!4 &4981776043608790
 Transform:
   m_ObjectHideFlags: 1
@@ -1692,6 +1692,7 @@ MonoBehaviour:
   GrenadeSpellChargeRate: 2
   GrenadeSpellChargeMin: 1
   GrenadeSpellChargeMax: 3
+  GrenadeSpellCooldown: 6
   FastSpell: {fileID: 1619904165486318, guid: 567e60837b2392d40a341852ce59081d, type: 2}
   BeamSpell: {fileID: 1176674357612666, guid: 8605ae4122132b243b5e17ddac422e61, type: 2}
   GrenadeSpell: {fileID: 1737105201036248, guid: ba9f3ca800b31774b8545844b27432b5,
@@ -1722,7 +1723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RigidBody: {fileID: 54407436998596074}
   Dude: {fileID: 1915082260117670}
-  MovementSpeed: 5
+  MovementSpeed: 7
   radius: 67.5
   animator: {fileID: 95213023160963794}
   walkBlendParamName: WalkBlend

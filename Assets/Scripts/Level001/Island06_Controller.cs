@@ -16,11 +16,20 @@ public class Island06_Controller : MonoBehaviour
     private bool done = false;
     private Coroutine coroutine;
     private TimelineArea t;
+    private IEnumerator routine;
 
     public void Start()
     {
         t = GetComponent<TimelineArea>();
-        var routine = begin().GetEnumerator();
+        routine = begin().GetEnumerator();
+        StartCoroutine(routine);
+    }
+
+    public IEnumerable<YieldInstruction> begin()
+    {
+        yield return null;
+
+        waveText.gameObject.SetActive(false);
 
         TimelineService.Instance.ActivateCheckpoint(t.Get<TimelineTrigger>("Checkpoint").First(), () =>
         {
@@ -33,16 +42,9 @@ public class Island06_Controller : MonoBehaviour
             {
                 o.SetActive(true);
             }
+            PlayerHealthScript.Instance.RestoreHealth();
         });
 
-        StartCoroutine(routine);
-    }
-
-    public IEnumerable<YieldInstruction> begin()
-    {
-        yield return null;
-
-        waveText.gameObject.SetActive(false);
 
         while (!t.playerInTrigger("Trigger")) yield return null;
 
@@ -57,6 +59,7 @@ public class Island06_Controller : MonoBehaviour
         while (true)
         {
             waveText.text = "Wave: " + i;
+            PlayerHealthScript.Instance.RestoreHealth();
 
             for (int j = 0; j < i; j++)
             {

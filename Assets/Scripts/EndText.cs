@@ -9,4 +9,9 @@ public class EndText : MonoBehaviour
     {
         GetComponent<TextMesh>().text = string.Format("FINAL SCORE: {0}\nThanks for playing!!", PlayerPoints.Points);
     }
+
+    void Update()
+    {
+        PlayerHealthScript.Instance.RestoreHealth();
+    }
 }
