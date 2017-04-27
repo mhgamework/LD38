@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4923346352795132}
   - component: {fileID: 33505274685397752}
   - component: {fileID: 23051051471083184}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box094
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4803271163188486}
   - component: {fileID: 33301638797544270}
   - component: {fileID: 23540359893645256}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4713106269324846}
   - component: {fileID: 33250589685388972}
   - component: {fileID: 23020820544896164}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tooth009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 114900038489631924}
   - component: {fileID: 54819968252231368}
   - component: {fileID: 136684341612804310}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: FastEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4113755566281906}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SpawnEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4389757632500716}
   - component: {fileID: 33541285753499890}
   - component: {fileID: 23901752564221846}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box096
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 4391735742883090}
   - component: {fileID: 33709149108964172}
   - component: {fileID: 23319955929070516}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Eye02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 4622235190734138}
   - component: {fileID: 198093782316434766}
   - component: {fileID: 199310980557685424}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Rocks (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 4239682663144116}
   - component: {fileID: 33849799560514238}
   - component: {fileID: 23864347074254600}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box092
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 4400971178902368}
   - component: {fileID: 33363804818341604}
   - component: {fileID: 23744518527426408}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Foot02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 4532565320437332}
   - component: {fileID: 33021682868820878}
   - component: {fileID: 23221407843030328}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tooth010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 4937665662636836}
   - component: {fileID: 33788581359540806}
   - component: {fileID: 23309410940053660}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box098
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 4966599428002050}
   - component: {fileID: 33662523814213110}
   - component: {fileID: 23578312856592368}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Iris02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 4540170044116778}
   - component: {fileID: 33999260241071468}
   - component: {fileID: 23914789090319482}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tooth014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 4450118765957764}
   - component: {fileID: 33044642246439340}
   - component: {fileID: 23393778003726234}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box088
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 4042901404868842}
   - component: {fileID: 33264861205240514}
   - component: {fileID: 23679431855555856}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box097
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 4861383605331460}
   - component: {fileID: 33595258293710172}
   - component: {fileID: 23401569017464070}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Hand01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 4093427637112792}
   - component: {fileID: 33566745327892230}
   - component: {fileID: 23455712869435764}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tooth011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 4777963829048578}
   - component: {fileID: 198881780958280648}
   - component: {fileID: 199253184025941086}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Rocks (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 4919755754259148}
   - component: {fileID: 33421115129744540}
   - component: {fileID: 23962557906538514}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Arm003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 4252858712976968}
   - component: {fileID: 33942081389426780}
   - component: {fileID: 23420060338668748}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box089
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 4043214318155690}
   - component: {fileID: 33747486590425254}
   - component: {fileID: 23313547608263634}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box099
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 4035684346736306}
   - component: {fileID: 33936464031907716}
   - component: {fileID: 23598087220796990}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tooth015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 4538271115552092}
   - component: {fileID: 198632245411014046}
   - component: {fileID: 199884521770701674}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Rocks (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 33399162422900314}
   - component: {fileID: 23388953418642792}
   - component: {fileID: 95833689374495972}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: BadGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 4865411290286988}
   - component: {fileID: 33878684960173022}
   - component: {fileID: 23824465030333978}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tooth013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 4338069868926960}
   - component: {fileID: 33210822612792104}
   - component: {fileID: 23010373748473088}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 4975371697679318}
   - component: {fileID: 33870409546455142}
   - component: {fileID: 23940635926964414}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 4194711454190820}
   - component: {fileID: 198690210794682928}
   - component: {fileID: 199937672058432214}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Rocks (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 4396734156174198}
   - component: {fileID: 33619698096166764}
   - component: {fileID: 23178880237485416}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   - component: {fileID: 4749514131789736}
   - component: {fileID: 33964500111735444}
   - component: {fileID: 23543358632720252}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box090
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 4821877088767580}
   - component: {fileID: 33267002819536512}
   - component: {fileID: 23091247516264368}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tooth012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 4959081864537968}
   - component: {fileID: 198879476472970612}
   - component: {fileID: 199409671679641518}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 4224265019646308}
   - component: {fileID: 33389662771739964}
   - component: {fileID: 23999214597206426}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Rib02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 4397467515987450}
   - component: {fileID: 33941594777889564}
   - component: {fileID: 23786681314077592}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box091
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -614,7 +614,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4230128326474448}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: DamageSplash (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -629,7 +629,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4022716419550684}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 4757562658779098}
   - component: {fileID: 198330964238900066}
   - component: {fileID: 199921453913214990}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SmokeVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 4032617398916664}
   - component: {fileID: 33292912409519544}
   - component: {fileID: 23408445878481746}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Eye01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +680,7 @@ GameObject:
   - component: {fileID: 4544112458442068}
   - component: {fileID: 33755506063264874}
   - component: {fileID: 23344784058946298}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Iris01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -697,7 +697,7 @@ GameObject:
   - component: {fileID: 4071557038994694}
   - component: {fileID: 33554033067011398}
   - component: {fileID: 23265202557596896}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -714,7 +714,7 @@ GameObject:
   - component: {fileID: 4236644421347270}
   - component: {fileID: 198798403184567370}
   - component: {fileID: 199146234754931214}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Rocks (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -731,7 +731,7 @@ GameObject:
   - component: {fileID: 4284565992250438}
   - component: {fileID: 33413319818615032}
   - component: {fileID: 23458599807288416}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Hand003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -748,7 +748,7 @@ GameObject:
   - component: {fileID: 4288455109423784}
   - component: {fileID: 33999209095247488}
   - component: {fileID: 23897686940903082}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Rib03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,7 +765,7 @@ GameObject:
   - component: {fileID: 4303021890533568}
   - component: {fileID: 33043544381688322}
   - component: {fileID: 23279863392974198}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 4462094168478166}
   - component: {fileID: 33796497508892412}
   - component: {fileID: 23820464161401594}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Rib01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -797,7 +797,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4923413184702238}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Horn01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 4351973664841252}
   - component: {fileID: 33433387409132406}
   - component: {fileID: 23328634058854324}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box093
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -831,7 +831,7 @@ GameObject:
   - component: {fileID: 4530594321301414}
   - component: {fileID: 33064775170086484}
   - component: {fileID: 23263047089601024}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: EyeBrow02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -848,7 +848,7 @@ GameObject:
   - component: {fileID: 4542728383940268}
   - component: {fileID: 33795260445775452}
   - component: {fileID: 23509098998995136}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Foot01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -863,7 +863,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4877174155663518}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Horn02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -880,7 +880,7 @@ GameObject:
   - component: {fileID: 4282695038166942}
   - component: {fileID: 33274882240727028}
   - component: {fileID: 23241249707058398}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: EyeBrow01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -897,7 +897,7 @@ GameObject:
   - component: {fileID: 4743787504415502}
   - component: {fileID: 33776771276093710}
   - component: {fileID: 23395063217262228}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box095
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -914,7 +914,7 @@ GameObject:
   - component: {fileID: 4825932098709020}
   - component: {fileID: 33920502687011728}
   - component: {fileID: 23142228440140536}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Arm01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -931,7 +931,7 @@ GameObject:
   - component: {fileID: 4710897181619198}
   - component: {fileID: 198221120534907268}
   - component: {fileID: 199122220343115708}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SmokeShell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -946,7 +946,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4372362557808780}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: DamageSplashContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -961,7 +961,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4055947143948292}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3417,6 +3417,7 @@ MonoBehaviour:
   healthDisplayHealthUnitWidth: 100
   bounty: 5
   fireDamageMultiplier: 0.2
+  iceDamageMultiplier: 1
   MovementSpeed: 5
   StrikeDamage: 1
   StrikeDistanceToStart: 2.65

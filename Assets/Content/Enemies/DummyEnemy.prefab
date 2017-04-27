@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4571891660923312}
   - component: {fileID: 33135832988410278}
   - component: {fileID: 23845183067319500}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Spine001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4464459351074106}
   - component: {fileID: 33773479934135522}
   - component: {fileID: 23178549249927970}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box106
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 114372191347886068}
   - component: {fileID: 54819968252231368}
   - component: {fileID: 136684341612804310}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: DummyEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 4889594213234642}
   - component: {fileID: 33565247022844606}
   - component: {fileID: 23480145869845120}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box110
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 4029828749591752}
   - component: {fileID: 33351906899309832}
   - component: {fileID: 23723441964707472}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: DummyEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 4127991778130668}
   - component: {fileID: 33576733757093330}
   - component: {fileID: 23670025663171046}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box107
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 4509698192723122}
   - component: {fileID: 33363385582370886}
   - component: {fileID: 23446569544394620}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box112
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4710359722974432}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Horn003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 4950677932693604}
   - component: {fileID: 33169857238993426}
   - component: {fileID: 23075800304358326}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box111
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4496288594558726}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Horn004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 4071674567547820}
   - component: {fileID: 33643578718347438}
   - component: {fileID: 23920128406601946}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box115
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 4547298027510952}
   - component: {fileID: 33033570108256918}
   - component: {fileID: 23127722341732886}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box114
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 4059690024806724}
   - component: {fileID: 33471843396382284}
   - component: {fileID: 23565639846048470}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box109
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 4111249786525406}
   - component: {fileID: 33792502238810100}
   - component: {fileID: 23429688789235836}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box104
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4014727227592202}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Dummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 4188295260878268}
   - component: {fileID: 33629933978935972}
   - component: {fileID: 23894351957281994}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box113
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 4998587141486030}
   - component: {fileID: 33156047477579262}
   - component: {fileID: 23218814857431990}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box108
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 4648681257719386}
   - component: {fileID: 33473532628538082}
   - component: {fileID: 23357917247626410}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Head001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 4061395153084308}
   - component: {fileID: 33819506366663388}
   - component: {fileID: 23933598637705084}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Box103
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 4590529611123234}
   - component: {fileID: 33326744920815466}
   - component: {fileID: 23089924090426388}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Neck001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1283,6 +1283,8 @@ MonoBehaviour:
   healthDisplaySpawnHeight: 3
   healthDisplayHealthUnitWidth: 100
   bounty: 1
+  fireDamageMultiplier: 1
+  iceDamageMultiplier: 1
   MovementSpeed: 0
   StrikeDamage: 0
   StrikeDistanceToStart: 0
